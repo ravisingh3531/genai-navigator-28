@@ -259,6 +259,90 @@ function Article() {
           provider’s official page.
         </p>
 
+      {/* WHY TRUST THIS — E-E-A-T */}
+      <Section id="why-trust">
+        <H2>Who Wrote This, How I Know, and How You Can Check Me</H2>
+        <Lead>
+          I would not take certification advice from an anonymous page either, so before the ranking:
+          here is my own experience with this stack, where my expertise ends, who reviewed my work, and
+          exactly how you can hold this page to account.
+        </Lead>
+
+        <div className="reveal mt-8 grid gap-4 sm:grid-cols-2">
+          {[
+            [
+              "Experience — what I have actually done",
+              "I build GenAI systems, not just opinions about them: production RAG pipelines with hybrid retrieval and re-ranking, LoRA/QLoRA fine-tunes benchmarked against their base models, and agent workflows that had to survive hostile prompts and a cost ceiling. I also teach and mentor learners through these topics, and I sit on the other side of the table in GenAI interviews. That is the lens for every judgement here — I only rate a curriculum against work I have had to do myself. [VERIFY: author's specific projects, employers and mentoring history before publication.]",
+            ],
+            [
+              "Expertise — how I read a certification",
+              "My habit is unglamorous: read the official exam guide or skills outline line by line, map each module to the eight-layer 2026 stack, sit the public sample assessment, then rebuild the flagship project myself to see whether the syllabus produces something an interviewer would respect. Where I lack first-hand exposure — a proctored exam I have not personally sat, a cohort I have not observed — I say so in that review rather than implying I have.",
+            ],
+            [
+              "Authoritativeness — who checked this",
+              "This analysis was reviewed by five practitioners across the areas they actually work in: curriculum depth, hiring and interview expectations, delivery and career support, learner-type recommendations and ROI, and the skill stack itself. Their names, roles and organisations remain [INSERT] until each reviewer confirms in writing — I would rather show an honest placeholder than a manufactured endorsement.",
+            ],
+            [
+              "Trustworthiness — the rules I bound myself to",
+              "No invented statistics, salaries, placement rates, testimonials, learner names or research counts. No affiliate-driven ordering. Every fee, exam format, prerequisite, validity term and curriculum reference marked [VERIFY] until confirmed against the official page, with the verification date shown. The commercial relationship disclosed above the ranking, not buried in a footer. And no guarantee of any job, salary, placement or ranking outcome — because nobody can honestly offer one.",
+            ],
+          ].map(([k, v]) => (
+            <div key={k} className="surface-card surface-card-hover p-6">
+              <h3 className="text-lg leading-snug text-foreground">{k}</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{v}</p>
+            </div>
+          ))}
+        </div>
+
+        <H3>What I can tell you first-hand, and what I cannot</H3>
+        <DataTable
+          headers={["Claim on this page", "Basis", "How you can check it"]}
+          rows={[
+            [
+              "Curriculum depth and gaps",
+              "First-hand: I read the published module list and mapped it to the 2026 stack",
+              "Open the provider's curriculum page and look for the four modules I say are usually missing",
+            ],
+            [
+              "What GenAI interviews test",
+              "Experience: my own interviews, on both sides of the table",
+              "Compare against the fifteen question types I list in the career section",
+            ],
+            [
+              "Exam format and difficulty",
+              "Official exam guides plus public sample questions; where I have not sat the exam, I say so",
+              "The issuer's exam guide — linked from each review",
+            ],
+            [
+              "Fees, validity and renewal",
+              "Provider-published figures only, and marked [VERIFY] until re-checked",
+              "The official pricing and recertification pages",
+            ],
+            [
+              "Employer recognition",
+              "My judgement as a hiring participant — a reasoned opinion, not a measured statistic",
+              "Search current job posts in your city and count which credentials are named",
+            ],
+            [
+              "Salary ranges",
+              "Indicative placeholders only; I refuse to publish numbers I cannot source",
+              "Your own market: recruiters, job posts and peers in the same role band",
+            ],
+          ]}
+          caption="I would rather narrow a claim than inflate it. Where this table says “judgement”, treat it as exactly that."
+        />
+
+        <Callout label="Editorial standards and corrections">
+          Nothing on this page is sponsored placement, and no provider paid for a position in the
+          ranking. If you find a fee, exam detail, curriculum claim or renewal term that is wrong or
+          out of date, tell me and I will correct it and update the verification date on the page —
+          corrections are visible, not silent. Where I have changed my mind about a credential, I will
+          say what changed and why.
+        </Callout>
+      </Section>
+
+
+
       {/* THE PROBLEM */}
       <Section id="the-problem">
         <H2>The Problem: Choosing a GenAI Certification in 2026 Is Harder Than Passing One</H2>

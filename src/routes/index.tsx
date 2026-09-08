@@ -218,9 +218,13 @@ function Article() {
         </div>
 
         <p className="mt-4 rounded-lg border border-border bg-muted/60 px-4 py-3 text-sm italic text-muted-foreground">
-          Disclosure: this article is published by LogicMojo; LogicMojo’s course is reviewed on the
-          same six criteria as every other program on this list, and its limitations are stated
-          openly.
+          Commercial disclosure: this article is published on a LogicMojo-owned property, and
+          LogicMojo sells the courses recommended here — that is a commercial interest you should
+          weigh. LogicMojo is scored on the same eight criteria as every other credential on this
+          list, its genuine limitations are stated in full, and no job, salary, placement or
+          “#1 / official certification” claim is made for it or for anyone else. Fees, exam formats,
+          prerequisites, validity and renewal terms are marked [VERIFY] until confirmed against the
+          provider’s official page.
         </p>
 
       {/* THE PROBLEM */}

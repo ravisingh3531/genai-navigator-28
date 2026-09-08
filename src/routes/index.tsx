@@ -907,7 +907,7 @@ function Article() {
         </P>
 
         <H3>1) Does it cover the complete 2026 GenAI stack — on top of real ML foundations?</H3>
-        <P className="">
+        <P>
           Here is the module progression stated as capability, not topic lists. [VERIFY every module
           against the live LogicMojo curriculum page before publishing; remove anything not offered.]
         </P>

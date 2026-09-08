@@ -1797,6 +1797,12 @@ function Article() {
       {/* SECTION 12 — Employer value */}
       <Section id="employer-value">
         <H2>Do Employers Actually Value GenAI Certifications? An Honest Answer</H2>
+        <Callout label="From the hiring side of the table">
+          When I have screened GenAI candidates, the certificate has never survived past the second
+          question — it earns the conversation, then the project decides it. The candidates who convert
+          are the ones who can say what broke in their retrieval, what they measured, and what they
+          changed. Read this section as one practitioner's hiring experience, not as market research.
+        </Callout>
         <P>
           Direct answer: <strong>yes, conditionally</strong> — as a screening signal, as an
           internal-mobility signal, and as proof of platform competence. <strong>No</strong>, as a

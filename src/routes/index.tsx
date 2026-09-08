@@ -1884,6 +1884,11 @@ function Article() {
       {/* HOW TO CHOOSE */}
       <Section id="how-to-choose">
         <H2>How to Choose the Right GenAI Certification</H2>
+        <Callout label="The order I use with mentees">
+          This is the sequence I walk through on a first mentoring call, and it takes about fifteen
+          minutes. It works because it forces the decision that people skip: naming the outcome before
+          naming the brand. Almost every regret I have heard came from reversing those two steps.
+        </Callout>
         <Lead>
           Direct answer: choose in this order — the outcome you need, the level of proof that outcome
           requires, your honest weekly hours, then the credential. Choosing brand first is what

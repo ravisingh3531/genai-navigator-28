@@ -13,11 +13,69 @@ import {
   StatCard,
   Section,
 } from "@/components/article-ui";
+import {
+  AuthorBio,
+  Checklist,
+  DecisionQuiz,
+  MentionCard,
+  Review,
+  ReviewerCarousel,
+  SiteFooter,
+  StickyCta,
+} from "@/components/review-ui";
+import { reviews } from "@/content/reviews";
+import { faqClusters, learnerTypes, mentions, reviewers } from "@/content/extras";
 
-const TITLE =
-  "Top 10 Best GenAI Certification Courses (2026) — Fees, Value & Career Scope";
+const TITLE = "Top 10 Best GenAI Certification Courses (2026)";
 const DESCRIPTION =
-  "I compared 80+ credentials to rank the best GenAI certification courses in 2026: LLMs, prompt engineering, RAG, LangChain, fine-tuning, AI agents, fees, employer recognition and ROI.";
+  "Compared: the 10 best GenAI certification courses for 2026 — LLMs, RAG, LangChain, fine-tuning, AI agents, fees, certification value and career scope.";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqClusters
+    .flatMap((c) => c.items)
+    .map((i) => ({
+      "@type": "Question",
+      name: i.q,
+      acceptedAnswer: { "@type": "Answer", text: i.a },
+    })),
+};
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Top 10 Best GenAI Certification Courses (2026)",
+  itemListElement: reviews.map((r) => ({
+    "@type": "ListItem",
+    position: r.rank,
+    name: r.name.replace(" [VERIFY exact program name]", ""),
+  })),
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: TITLE,
+  description: DESCRIPTION,
+  author: { "@type": "Person", name: "[INSERT: Author name]" },
+  datePublished: "[INSERT DATE]",
+  dateModified: "[INSERT DATE]",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "/" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Best GenAI Certification Courses",
+      item: "/best-genai-certification-courses",
+    },
+  ],
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,6 +87,13 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/best-genai-certification-courses" }],
+    scripts: [
+      { type: "application/ld+json", children: JSON.stringify(articleSchema) },
+      { type: "application/ld+json", children: JSON.stringify(faqSchema) },
+      { type: "application/ld+json", children: JSON.stringify(itemListSchema) },
+      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) },
+    ],
   }),
   component: Article,
 });
@@ -38,17 +103,19 @@ const toc = [
   ["skill-stack", "The 2026 GenAI Skill Stack"],
   ["at-a-glance", "Top 10 GenAI Certifications At a Glance"],
   ["logicmojo", "Why LogicMojo Stands Out"],
-  ["reviews", "Detailed Reviews of All 10 Certifications"],
-  ["learner-types", "Best Certification for Each Learner Type"],
-  ["honorable", "Honorable Mentions"],
-  ["career-scope", "GenAI Career Scope, Roles and Salaries"],
-  ["roadmap", "The Certification + Portfolio Roadmap"],
-  ["employer-value", "How Employers Actually Read GenAI Certificates"],
-  ["red-flags", "12 Red Flags in GenAI Certification Marketing"],
+  ["reviews", "In-Depth Reviews of All 10 Certifications"],
+  ["honorable", "Also Considered — 10 That Missed the Top 10"],
+  ["learner-types", "Which Certification Should You Choose?"],
+  ["career-scope", "GenAI Career Scope, Roles and Salary Bands"],
+  ["roadmap", "Your Certification + Portfolio Roadmap"],
+  ["employer-value", "Do Employers Actually Value GenAI Certifications?"],
+  ["red-flags", "Red Flags — Spotting a Bad Certification"],
   ["decision-tree", "Decision Tree — Pick Yours in 60 Seconds"],
-  ["free-vs-paid", "Free vs Paid GenAI Certifications"],
-  ["roi", "ROI Analysis — Is a GenAI Certification Worth It?"],
-  ["faqs", "35+ GenAI Certification FAQs"],
+  ["free-vs-paid", "Free vs Paid — When Free Is Enough"],
+  ["roi", "ROI Reality — Is It Worth It?"],
+  ["author", "About the Author"],
+  ["reviewers", "Expert Reviewers"],
+  ["faqs", "36 GenAI Certification FAQs"],
   ["verdict", "Final Verdict"],
 ];
 

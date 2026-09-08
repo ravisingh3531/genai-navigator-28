@@ -2151,6 +2151,12 @@ function Article() {
       {/* SECTION 15 — ROI */}
       <Section id="roi">
         <H2>ROI Reality — Is a GenAI Certification Worth It?</H2>
+        <Callout label="Why I refuse to publish a payback number">
+          I could make this section look far more impressive with an average-salary-hike figure. I will
+          not, because I have no defensible source for one and neither does anyone quoting them at you.
+          What I can give you honestly is the formula, the three variables that actually move it, and
+          the scenarios I have watched play out — including the ones that lost money.
+        </Callout>
         <P>
           Direct answer: it depends on three variables, and the certificate is not one of them. Use
           this formula rather than a testimonial:

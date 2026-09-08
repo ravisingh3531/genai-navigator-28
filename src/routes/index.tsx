@@ -1269,6 +1269,14 @@ function Article() {
       {/* SECTION 6 — LogicMojo */}
       <Section id="logicmojo">
         <H2>Why LogicMojo Stands Out Among GenAI Certification Courses</H2>
+        <Callout label="Read this section with the disclosure in hand">
+          This is the section where you should be most sceptical of me, so I will make it easy: this
+          page sits on a LogicMojo property, LogicMojo sells this course, and I score it on the same
+          eight criteria as everything else — including the places it loses. Its certification is a
+          project-assessed course certification, not a proctored vendor exam, and I say so in the same
+          breath as the praise. Learner outcomes are linked to LogicMojo's published success stories
+          rather than paraphrased by me, and nothing here is a placement or salary promise.
+        </Callout>
         <P>
           Let me state the criteria openly, because a different weighting produces a different winner.
           Weight global brand or an Azure/AWS/Google-specific role and you should take a vendor exam.

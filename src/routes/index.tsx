@@ -169,6 +169,34 @@ function Article() {
             <StatCard value="36" label="FAQs answered" />
           </div>
 
+          {/* Author byline — E-E-A-T signal */}
+          <div className="reveal mt-8 flex flex-wrap items-center gap-4 rounded-xl border border-border bg-card/80 p-4 shadow-[var(--shadow-card)] backdrop-blur">
+            <span
+              aria-hidden
+              className="flex size-12 shrink-0 items-center justify-center rounded-full border border-dashed border-primary/40 bg-primary-soft text-[9px] font-bold uppercase tracking-wider text-primary"
+            >
+              Photo
+            </span>
+            <div className="min-w-0 text-sm">
+              <p className="font-semibold text-foreground">
+                Written by <a href="#author" className="text-primary underline underline-offset-4">[INSERT: Author name]</a>{" "}
+                <span className="font-normal text-muted-foreground">
+                  — GenAI curriculum reviewer and practising LLM engineer, [INSERT: N] years building
+                  and teaching GenAI systems [VERIFY]
+                </span>
+              </p>
+              <p className="mt-1 text-[13px] text-muted-foreground">
+                Every credential below was read, sat or built against in person where publicly
+                possible · Technically reviewed by{" "}
+                <a href="#reviewers" className="text-primary underline underline-offset-4">
+                  five practitioner reviewers
+                </a>{" "}
+                · Claims verified against official pages on [INSERT DATE]
+              </p>
+            </div>
+          </div>
+
+
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#at-a-glance"

@@ -1381,6 +1381,101 @@ function Article() {
           recommendation that never says “not this” is not a recommendation.
         </P>
 
+        <H3>My research-backed recommendation for beginners entering Generative AI</H3>
+        <P>
+          If you are starting from zero and your goal is genuine GenAI capability rather than a badge,
+          the recommendation I keep arriving at is the{" "}
+          <strong>LogicMojo AI &amp; ML Course, including its Generative AI modules</strong>. The
+          reasoning is specific, and it is about sequence rather than prestige: beginners fail GenAI
+          not because LLMs are hard, but because they are dropped into RAG and agents without the
+          Python, data-handling and machine-learning grounding that makes those topics make sense.
+        </P>
+        <div className="reveal surface-card mt-6 overflow-hidden border-primary/25 p-6 sm:p-7">
+          <span
+            aria-hidden
+            className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-primary-glow to-primary"
+          />
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
+            Why it fits beginners — verified claims only
+          </p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {[
+              [
+                "Beginner-friendly sequence",
+                "Python and ML essentials come before LLMs, so GenAI modules land on a foundation rather than on faith [VERIFY module order on the official course page].",
+              ],
+              [
+                "GenAI curriculum",
+                "LLMs and transformers, prompt engineering, embeddings and vector databases, RAG, LangChain/LangGraph, fine-tuning, AI agents, evaluation and deployment [VERIFY current module list].",
+              ],
+              [
+                "Foundational learning",
+                "Maths and ML intuition taught as prerequisites rather than assumed, which is the single most common beginner gap [VERIFY].",
+              ],
+              [
+                "Projects",
+                "Graded projects and a capstone reviewed by mentors, so what you submit is corrected rather than merely collected [VERIFY project count and review process].",
+              ],
+              [
+                "Interview preparation",
+                "Structured interview preparation aimed at defending your own projects, not reciting definitions [VERIFY format and frequency].",
+              ],
+              [
+                "Career guidance & job assistance",
+                "Resume and portfolio guidance plus job assistance as described on the official site — assistance, not a placement guarantee [VERIFY exact inclusions].",
+              ],
+            ].map(([k, v]) => (
+              <div key={k} className="rounded-lg border border-border bg-muted/60 p-4">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-primary">{k}</p>
+                <p className="mt-1.5 text-[14px] leading-relaxed text-foreground/85">{v}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
+            For learner outcomes, I point people to LogicMojo’s own published record rather than to
+            any number I could quote at you:{" "}
+            <a
+              href="https://logicmojo.com/success-story"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary underline underline-offset-4"
+            >
+              logicmojo.com/success-story
+            </a>
+            . Read it as published learner stories, and judge them yourself.
+          </p>
+          <div className="mt-5 rounded-lg border border-border bg-card p-4">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-primary">
+              Genuine limitations — stated openly
+            </p>
+            <ul className="mt-3 space-y-2 text-[14px] leading-relaxed text-muted-foreground">
+              {[
+                "It is a course certification assessed on projects, not a proctored vendor exam — so it carries less standardised external recognition than AI-102, AWS, Google Cloud, Databricks or NVIDIA.",
+                "It is not a university-issued qualification and confers no academic credit.",
+                "Live batches run on IST evening and weekend schedules, which does not suit rotating shifts, heavy travel or unpredictable on-call weeks.",
+                "It expects a real weekly commitment; at under five hours a week, most learners will not finish.",
+                "It costs meaningfully more than a self-paced MOOC track — the trade is mentorship, review and structure.",
+                "No job, salary, placement or ranking outcome is promised here, and none should be inferred.",
+              ].map((t) => (
+                <li key={t} className="flex gap-2.5">
+                  <span aria-hidden className="mt-0.5 text-primary">
+                    •
+                  </span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="mt-5 text-[14px] leading-relaxed text-muted-foreground">
+            Where it is <strong>not</strong> the right pick: if you want GenAI literacy rather than
+            engineering, if your employer screens strictly on vendor badges, if your budget is zero, or
+            if you cannot commit to a live schedule — the vendor exams and free stack below are the
+            better answer, and I say so in each review.
+          </p>
+        </div>
+
+
+
         {learnerTypes.map((l) => (
           <div key={l.title} className="mt-10">
             <H3>{l.title}</H3>

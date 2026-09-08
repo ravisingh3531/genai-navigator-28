@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 
 /* ------------------------------------------------------------------ */
 /* Full 12-part certification review                                   */
@@ -282,30 +282,51 @@ type QuizQuestion = { id: string; question: string; options: { value: string; la
 
 const quizQuestions: QuizQuestion[] = [
   {
-    id: "background",
-    question: "1. What is your background?",
+    id: "experience",
+    question: "1. How much generative-AI experience do you have today?",
     options: [
-      { value: "nontech", label: "Non-technical" },
-      { value: "somecode", label: "Some coding" },
-      { value: "dev", label: "Developer" },
-      { value: "ml", label: "ML practitioner" },
-      { value: "student", label: "Student / fresher" },
+      { value: "none", label: "None — complete beginner" },
+      { value: "user", label: "I use ChatGPT/Copilot at work" },
+      { value: "built", label: "I've built a small LLM app" },
+      { value: "prod", label: "I've shipped GenAI to production" },
     ],
   },
   {
     id: "goal",
-    question: "2. What is your goal?",
+    question: "2. What do you want the certification to do for you?",
     options: [
-      { value: "role", label: "Land a GenAI engineer role" },
-      { value: "current", label: "Add GenAI to my current role" },
-      { value: "promo", label: "A credential for promotion" },
-      { value: "leader", label: "Leadership-level literacy" },
-      { value: "test", label: "Testing the waters" },
+      { value: "role", label: "Help me land a GenAI role" },
+      { value: "current", label: "Add GenAI to my current job" },
+      { value: "promo", label: "Support a promotion or appraisal" },
+      { value: "leader", label: "Give me leadership-level literacy" },
+      { value: "test", label: "Let me test the field cheaply" },
+    ],
+  },
+  {
+    id: "background",
+    question: "3. What is your technical background?",
+    options: [
+      { value: "nontech", label: "Non-technical" },
+      { value: "somecode", label: "Some Python / scripting" },
+      { value: "dev", label: "Software developer" },
+      { value: "data", label: "Data / analytics engineer" },
+      { value: "ml", label: "ML practitioner" },
+    ],
+  },
+  {
+    id: "specialisation",
+    question: "4. Which GenAI specialisation do you want to end up in?",
+    options: [
+      { value: "rag", label: "RAG & vector search" },
+      { value: "agents", label: "AI agents & orchestration" },
+      { value: "finetune", label: "Fine-tuning & model work" },
+      { value: "cloudapp", label: "Cloud GenAI app engineering" },
+      { value: "strategy", label: "Strategy / governance, not building" },
     ],
   },
   {
     id: "budget",
-    question: "3. What is your budget?",
+    question: "5. What can you realistically spend?",
     options: [
       { value: "free", label: "Free only" },
       { value: "u15", label: "Under ₹15K" },
@@ -315,158 +336,363 @@ const quizQuestions: QuizQuestion[] = [
     ],
   },
   {
-    id: "hours",
-    question: "4. How many hours a week can you commit?",
-    options: [
-      { value: "u5", label: "Under 5" },
-      { value: "5to10", label: "5–10" },
-      { value: "10to15", label: "10–15" },
-      { value: "15plus", label: "15+" },
-    ],
-  },
-  {
-    id: "priority",
-    question: "5. What matters most to you?",
-    options: [
-      { value: "build", label: "Build capability" },
-      { value: "credential", label: "A recognised credential" },
-      { value: "placement", label: "Placement support" },
-      { value: "cost", label: "Lowest cost" },
-    ],
-  },
-  {
     id: "format",
-    question: "6. Which format suits you?",
+    question: "6. Which learning format actually suits your week?",
     options: [
-      { value: "live", label: "Live cohort" },
-      { value: "self", label: "Self-paced" },
-      { value: "exam", label: "Exam only" },
+      { value: "live", label: "Live mentor-led cohort" },
+      { value: "self", label: "Self-paced video" },
+      { value: "exam", label: "Self-study, then sit an exam" },
       { value: "mixed", label: "Mixed" },
+    ],
+  },
+  {
+    id: "cloud",
+    question: "7. Which platform does your organisation run on?",
+    options: [
+      { value: "azure", label: "Azure / Microsoft" },
+      { value: "aws", label: "AWS" },
+      { value: "gcp", label: "Google Cloud" },
+      { value: "databricks", label: "Databricks / lakehouse" },
+      { value: "none", label: "None / not sure" },
     ],
   },
 ];
 
-const cloudQuestion: QuizQuestion = {
-  id: "cloud",
-  question: "7. Which platform does your organisation run on?",
-  options: [
-    { value: "azure", label: "Azure / Microsoft" },
-    { value: "aws", label: "AWS" },
-    { value: "gcp", label: "Google Cloud" },
-    { value: "databricks", label: "Databricks / lakehouse" },
-    { value: "none", label: "None / not sure" },
-  ],
+type Recommendation = {
+  key: string;
+  pick: string;
+  type: string;
+  reason: string;
+  details: { label: string; value: string }[];
+  pairWith: string;
+  href: string;
+  linkLabel: string;
 };
 
-function recommend(a: Record<string, string>): { pick: string; reason: string } | null {
-  const required = [...quizQuestions, cloudQuestion].map((q) => q.id);
+const CATALOG: Record<string, Recommendation> = {
+  logicmojoAiMl: {
+    key: "logicmojoAiMl",
+    pick: "LogicMojo — AI & ML Course (with Generative AI modules)",
+    type: "Course certification (project-assessed, not a proctored vendor exam)",
+    reason:
+      "You are starting from the beginning, so foundations come first: Python and ML essentials before LLMs, prompt engineering, RAG and agents — taught live, with mentor support so you are not self-diagnosing gaps.",
+    details: [
+      { label: "Issuer", value: "LogicMojo (specialist AI/ML training provider)" },
+      { label: "Prerequisites", value: "None stated — beginner onboarding included [VERIFY]" },
+      { label: "Assessment", value: "Graded projects + capstone with mentor review [VERIFY]" },
+      { label: "Fees / duration", value: "₹XX,XXX · X months, 10–15 hrs/week [VERIFY]" },
+      { label: "Includes", value: "Interview preparation, portfolio and career guidance [VERIFY]" },
+      { label: "Validity", value: "No expiry or renewal fee stated [VERIFY]" },
+    ],
+    pairWith:
+      "One low-cost recognised vendor badge (AWS AI Practitioner or Google Cloud Generative AI Leader) for the HR screen.",
+    href: "https://logicmojo.com/",
+    linkLabel: "Visit the official LogicMojo site",
+  },
+  logicmojoGenAi: {
+    key: "logicmojoGenAi",
+    pick: "LogicMojo — Generative AI Course",
+    type: "Course certification (project-assessed)",
+    reason:
+      "You already code and you are optimising for what you can build and defend in an interview — the full stack including RAG, LangChain/LangGraph, fine-tuning, agents, evaluation and deployment.",
+    details: [
+      { label: "Issuer", value: "LogicMojo" },
+      { label: "Prerequisites", value: "Programming comfort recommended [VERIFY]" },
+      { label: "Assessment", value: "Graded projects + capstone + code review [VERIFY]" },
+      { label: "Fees / duration", value: "₹XX,XXX · X months [VERIFY]" },
+      { label: "Format", value: "Live IST evening / weekend batches [VERIFY]" },
+      { label: "Validity", value: "No expiry stated [VERIFY]" },
+    ],
+    pairWith: "Your organisation's cloud vendor exam, for external recognition.",
+    href: "https://logicmojo.com/",
+    linkLabel: "Visit the official LogicMojo site",
+  },
+  ai102: {
+    key: "ai102",
+    pick: "Microsoft Certified: Azure AI Engineer Associate (AI-102)",
+    type: "Vendor certification · proctored exam",
+    reason:
+      "In an Azure-standardised organisation this is the most recognised GenAI engineering credential, and it maps directly to the services your team already pays for.",
+    details: [
+      { label: "Issuer", value: "Microsoft" },
+      { label: "Exam", value: "AI-102, proctored, scenario-heavy [VERIFY format and length]" },
+      { label: "Prerequisites", value: "Recommended Python/C# and Azure familiarity" },
+      { label: "Fees", value: "$XXX / ₹XX,XXX [VERIFY current price]" },
+      { label: "Validity", value: "Renewal required — free online renewal [VERIFY cycle]" },
+      { label: "Ceiling", value: "Platform competence, not portfolio capability" },
+    ],
+    pairWith: "A deployed RAG or agent project of your own, on GitHub.",
+    href: "https://learn.microsoft.com/credentials/certifications/azure-ai-engineer/",
+    linkLabel: "Open the official Microsoft exam page",
+  },
+  awsPractitioner: {
+    key: "awsPractitioner",
+    pick: "AWS Certified AI Practitioner (AIF-C01)",
+    type: "Vendor certification · proctored foundational exam",
+    reason:
+      "A credible, inexpensive first rung with very high brand recognition — ideal when you need a recognised name quickly without a coding prerequisite.",
+    details: [
+      { label: "Issuer", value: "Amazon Web Services" },
+      { label: "Exam", value: "AIF-C01, foundational level [VERIFY question count and duration]" },
+      { label: "Prerequisites", value: "None required" },
+      { label: "Fees", value: "$XXX [VERIFY current price]" },
+      { label: "Validity", value: "Recertification cycle applies [VERIFY]" },
+      { label: "Ceiling", value: "Literacy and service awareness" },
+    ],
+    pairWith: "A project-backed program if you intend to build, not just to name services.",
+    href: "https://aws.amazon.com/certification/certified-ai-practitioner/",
+    linkLabel: "Open the official AWS certification page",
+  },
+  gcpLeader: {
+    key: "gcpLeader",
+    pick: "Google Cloud Generative AI Leader",
+    type: "Vendor certification · proctored, non-engineering",
+    reason:
+      "You need to scope, evaluate and govern GenAI work rather than build it — this is fast, brand-recognised and has no coding prerequisite.",
+    details: [
+      { label: "Issuer", value: "Google Cloud" },
+      { label: "Exam", value: "Proctored, business-and-strategy oriented [VERIFY]" },
+      { label: "Prerequisites", value: "None required" },
+      { label: "Fees", value: "$XXX [VERIFY current price]" },
+      { label: "Validity", value: "Time-limited; renewal required [VERIFY term]" },
+      { label: "Ceiling", value: "Leadership literacy — explicitly not engineering" },
+    ],
+    pairWith: "Nothing, if you do not intend to build. A project program, if you do.",
+    href: "https://cloud.google.com/learn/certification/generative-ai-leader",
+    linkLabel: "Open the official Google Cloud page",
+  },
+  databricks: {
+    key: "databricks",
+    pick: "Databricks Certified Generative AI Engineer Associate",
+    type: "Vendor certification · proctored exam",
+    reason:
+      "The most RAG-centric exam on this list, and it reads strongly inside lakehouse-based data teams — a direct match for your platform and your specialisation.",
+    details: [
+      { label: "Issuer", value: "Databricks" },
+      { label: "Exam", value: "Proctored, RAG and LLM application focused [VERIFY]" },
+      { label: "Prerequisites", value: "Recommended hands-on Databricks experience" },
+      { label: "Fees", value: "$XXX [VERIFY current price]" },
+      { label: "Validity", value: "Typically time-limited [VERIFY term]" },
+      { label: "Ceiling", value: "Applied RAG engineering within the Databricks stack" },
+    ],
+    pairWith: "A portable, non-Databricks project so your skills read outside the platform.",
+    href: "https://www.databricks.com/learn/certification/generative-ai-engineer-associate",
+    linkLabel: "Open the official Databricks certification page",
+  },
+  nvidia: {
+    key: "nvidia",
+    pick: "NVIDIA-Certified Associate: Generative AI LLMs (NCA-GENL)",
+    type: "Vendor certification · proctored exam",
+    reason:
+      "The most technically demanding associate-level exam here — it tests genuine LLM and transformer understanding, which suits your background and your model-side specialisation.",
+    details: [
+      { label: "Issuer", value: "NVIDIA" },
+      { label: "Exam", value: "NCA-GENL, proctored [VERIFY format and duration]" },
+      { label: "Prerequisites", value: "Recommended Python and deep-learning basics" },
+      { label: "Fees", value: "$XXX [VERIFY current price]" },
+      { label: "Validity", value: "Time-limited [VERIFY term]" },
+      { label: "Ceiling", value: "LLM and model-side depth; less product engineering" },
+    ],
+    pairWith: "A fine-tuning project benchmarked against its base model.",
+    href: "https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-associate/",
+    linkLabel: "Open the official NVIDIA certification page",
+  },
+  dlai: {
+    key: "dlai",
+    pick: "DeepLearning.AI × AWS — Generative AI with LLMs",
+    type: "Course certificate (completion-based, audit available free)",
+    reason:
+      "Your answers point to testing appetite before spending. This is the strongest low-cost foundation in the category — finish it, then buy only the credential you actually need.",
+    details: [
+      { label: "Issuer", value: "DeepLearning.AI with AWS, on Coursera" },
+      { label: "Prerequisites", value: "Python and basic ML recommended" },
+      { label: "Assessment", value: "Quizzes and labs — not a proctored exam" },
+      { label: "Fees", value: "Free to audit; certificate on subscription [VERIFY price]" },
+      { label: "Duration", value: "Roughly a few weeks part-time [VERIFY]" },
+      { label: "Ceiling", value: "Strong LLM foundations; not a hiring-grade credential alone" },
+    ],
+    pairWith: "Hugging Face's free courses, then one paid credential.",
+    href: "https://www.coursera.org/learn/generative-ai-with-llms",
+    linkLabel: "Open the official course page",
+  },
+  ibm: {
+    key: "ibm",
+    pick: "IBM Generative AI Engineering Professional Certificate",
+    type: "Course certificate (multi-course, completion-based)",
+    reason:
+      "The best applied-practice value on a tight budget for someone who already codes and can self-motivate through a long self-paced track.",
+    details: [
+      { label: "Issuer", value: "IBM, on Coursera" },
+      { label: "Prerequisites", value: "None stated; Python helps a lot" },
+      { label: "Assessment", value: "Graded labs and projects — not proctored" },
+      { label: "Fees", value: "Monthly subscription [VERIFY current price]" },
+      { label: "Duration", value: "Several months part-time [VERIFY course count]" },
+      { label: "Ceiling", value: "Applied practice; portfolio depends on your own extension" },
+    ],
+    pairWith: "One vendor exam for recognition, plus your own deployed capstone.",
+    href: "https://www.coursera.org/professional-certificates/ibm-generative-ai-engineering",
+    linkLabel: "Open the official IBM certificate page",
+  },
+  purdue: {
+    key: "purdue",
+    pick: "Purdue University × Simplilearn — Applied Generative AI Specialization",
+    type: "University-branded program certificate",
+    reason:
+      "Credential-led and employer-funded paths are exactly where a university-tagged certificate earns its premium, and your budget supports it.",
+    details: [
+      { label: "Issuer", value: "Simplilearn, co-branded with Purdue University" },
+      { label: "Prerequisites", value: "Work experience typically expected [VERIFY]" },
+      { label: "Assessment", value: "Projects and capstone; not a proctored vendor exam" },
+      { label: "Fees", value: "₹X,XX,XXX [VERIFY current price]" },
+      { label: "Duration", value: "Several months, cohort-based [VERIFY]" },
+      { label: "Ceiling", value: "Applied breadth plus brand; depth varies by cohort" },
+    ],
+    pairWith: "A vendor exam if your target employers screen on platform skills.",
+    href: "https://www.simplilearn.com/applied-ai-generative-ai-program-purdue-university",
+    linkLabel: "Open the official program page",
+  },
+};
+
+function recommend(a: Record<string, string>): Recommendation | null {
+  const required = quizQuestions.map((q) => q.id);
   if (required.some((id) => !a[id])) return null;
 
-  const background = a["background"] ?? "";
+  const experience = a["experience"] ?? "";
   const goal = a["goal"] ?? "";
+  const background = a["background"] ?? "";
+  const spec = a["specialisation"] ?? "";
   const budget = a["budget"] ?? "";
-  const hours = a["hours"] ?? "";
-  const priority = a["priority"] ?? "";
   const format = a["format"] ?? "";
   const cloud = a["cloud"] ?? "";
   const canPay = ["15to60", "60to150", "150plus"].includes(budget);
-  const enoughHours = ["10to15", "15plus"].includes(hours);
+  const beginner = experience === "none" || experience === "user";
 
-  if (priority === "placement" && (goal === "role" || background === "student")) {
-    return {
-      pick: "LogicMojo — Generative AI Course",
-      reason:
-        "You are optimising for conversion, and the projects-plus-interview-preparation combination is what converts; add one recognised vendor badge for the HR screen.",
+  if (budget === "free") return CATALOG["dlai"]!;
+  if (goal === "test") return CATALOG["dlai"]!;
+  if (spec === "strategy" || goal === "leader") return CATALOG["gcpLeader"]!;
+
+  if (beginner && background === "nontech" && !canPay) return CATALOG["awsPractitioner"]!;
+  if (beginner && canPay && format !== "exam" && goal !== "promo")
+    return CATALOG["logicmojoAiMl"]!;
+
+  if (format === "exam" || goal === "current" || goal === "promo") {
+    if (cloud === "azure") return CATALOG["ai102"]!;
+    if (cloud === "databricks") return CATALOG["databricks"]!;
+    if (cloud === "gcp") return CATALOG["gcpLeader"]!;
+    if (cloud === "aws") return CATALOG["awsPractitioner"]!;
+    if (spec === "finetune" || background === "ml") return CATALOG["nvidia"]!;
+    if (goal === "promo" && budget === "150plus") return CATALOG["purdue"]!;
+  }
+
+  if (spec === "finetune" && background === "ml" && !canPay) return CATALOG["nvidia"]!;
+  if (spec === "rag" && cloud === "databricks") return CATALOG["databricks"]!;
+  if (spec === "cloudapp" && cloud === "azure") return CATALOG["ai102"]!;
+
+  if (goal === "role" && canPay) return CATALOG["logicmojoGenAi"]!;
+  if (goal === "role" && budget === "u15") return CATALOG["ibm"]!;
+  if (budget === "150plus") return CATALOG["purdue"]!;
+  return CATALOG["ibm"]!;
+}
+
+function ResultModal({ result, onClose }: { result: Recommendation; onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
     };
-  }
-  if (priority === "build" && enoughHours && canPay) {
-    return {
-      pick: "LogicMojo — Generative AI Course",
-      reason:
-        "You have the hours and the budget for a project-graded program that covers all seven layers including agents, MCP, evaluation and deployment.",
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
     };
-  }
-  if (goal === "leader" || priority === "credential" && background === "nontech") {
-    return {
-      pick: "Google Cloud Generative AI Leader",
-      reason:
-        "You need to scope, evaluate and govern GenAI work rather than build it — this is cheap, fast and brand-recognised, with no coding prerequisite.",
-    };
-  }
-  if (priority === "credential" && cloud === "azure") {
-    return {
-      pick: "Microsoft Certified: Azure AI Engineer Associate (AI-102)",
-      reason:
-        "It is the most employer-recognised GenAI engineering exam in Azure-standardised organisations; pair it with real projects.",
-    };
-  }
-  if (priority === "credential" && cloud === "aws") {
-    return {
-      pick: "AWS Certified AI Practitioner (AIF-C01)",
-      reason:
-        "A credible, inexpensive first rung with very high brand recognition inside AWS-centric organisations.",
-    };
-  }
-  if (cloud === "databricks" || (background === "dev" && priority === "build" && !canPay)) {
-    if (cloud === "databricks")
-      return {
-        pick: "Databricks Certified Generative AI Engineer Associate",
-        reason:
-          "It is the most RAG-centric exam available and reads strongly inside lakehouse-based data teams.",
-      };
-  }
-  if (background === "ml" && priority === "credential") {
-    return {
-      pick: "NVIDIA-Certified Associate: Generative AI LLMs (NCA-GENL)",
-      reason:
-        "The most technically demanding associate exam here — it tests real LLM understanding, which suits an ML practitioner.",
-    };
-  }
-  if (budget === "free" || priority === "cost") {
-    return {
-      pick: "DeepLearning.AI × AWS — Generative AI with LLMs, plus Hugging Face courses",
-      reason:
-        "The 2026 free stack is genuinely world-class; complete it, then buy only the vendor exam you actually need.",
-    };
-  }
-  if (budget === "u15" && (background === "dev" || background === "somecode")) {
-    return {
-      pick: "IBM Generative AI Engineering Professional Certificate",
-      reason:
-        "The best applied-practice value for someone who already codes and can self-motivate on a tight budget.",
-    };
-  }
-  if (goal === "promo" && budget === "150plus") {
-    return {
-      pick: "Purdue University × Simplilearn — Applied Generative AI Specialization",
-      reason:
-        "Employer-funded and credential-driven paths are exactly where a university-branded certificate earns its price.",
-    };
-  }
-  if (background === "nontech" && goal === "role") {
-    return {
-      pick: "upGrad × IIIT-Bangalore, or LogicMojo if capability matters more than the logo",
-      reason:
-        "Career switchers need an onramp; choose the academic tag when your target sector screens on credentials, and the project program when interviews decide.",
-    };
-  }
-  if (format === "exam") {
-    return {
-      pick: "Your platform's vendor exam (AI-102, AWS AIF, Google Cloud, Databricks or NVIDIA)",
-      reason:
-        "Exam-only paths give recognition, not capability — book the one matching your stack and build a portfolio beside it.",
-    };
-  }
-  return {
-    pick: "DeepLearning.AI × AWS first, then reassess",
-    reason:
-      "Your answers point to testing appetite before spending: three free weeks on LLM foundations will tell you which path is worth paying for.",
-  };
+  }, [onClose]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center p-0 sm:items-center sm:p-6">
+      <button
+        type="button"
+        aria-label="Close recommendation"
+        onClick={onClose}
+        className="absolute inset-0 cursor-default bg-foreground/40 backdrop-blur-sm"
+      />
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="quiz-result-title"
+        className="animate-fade-up relative max-h-[88vh] w-full max-w-xl overflow-y-auto rounded-t-2xl border border-primary/25 bg-card p-6 shadow-[var(--shadow-glow)] sm:rounded-2xl sm:p-8"
+      >
+        <span
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-primary-glow to-primary"
+        />
+        <div className="flex items-start justify-between gap-4">
+          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
+            Your recommended certification
+          </span>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="-mr-1 -mt-1 flex size-8 shrink-0 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:bg-primary-soft hover:text-primary"
+          >
+            ✕
+          </button>
+        </div>
+        <h4 id="quiz-result-title" className="mt-3 text-2xl leading-snug text-foreground">
+          {result.pick}
+        </h4>
+        <p className="mt-2 inline-block rounded-full bg-primary-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
+          {result.type}
+        </p>
+        <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{result.reason}</p>
+
+        <dl className="mt-6 grid gap-2.5 sm:grid-cols-2">
+          {result.details.map((d) => (
+            <div key={d.label} className="rounded-lg border border-border bg-muted/60 px-3.5 py-2.5">
+              <dt className="text-[10px] font-bold uppercase tracking-wider text-primary">
+                {d.label}
+              </dt>
+              <dd className="mt-0.5 text-[13px] font-medium leading-snug text-foreground">
+                {d.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+
+        <p className="mt-5 rounded-lg border border-primary/25 bg-primary-soft/60 px-4 py-3 text-[14px] leading-relaxed text-foreground/85">
+          <strong>Pair it with:</strong> {result.pairWith}
+        </p>
+
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a
+            href={result.href}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary-glow px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform duration-200 hover:-translate-y-0.5"
+          >
+            {result.linkLabel} →
+          </a>
+          <button
+            type="button"
+            onClick={onClose}
+            className="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-card px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary-soft"
+          >
+            Change my answers
+          </button>
+        </div>
+        <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+          This is guidance, not a guarantee — no outcome, placement or salary is promised. Confirm
+          fees, exam format, prerequisites, validity and renewal on the official page before paying.
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export function DecisionQuiz() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const questions = [...quizQuestions, cloudQuestion];
+  const [open, setOpen] = useState(false);
+  const questions = quizQuestions;
   const result = useMemo(() => recommend(answers), [answers]);
   const answered = questions.filter((q) => answers[q.id]).length;
 
@@ -474,7 +700,7 @@ export function DecisionQuiz() {
     <div className="reveal surface-card mt-8 overflow-hidden p-6 sm:p-8">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h3 className="text-xl leading-snug text-foreground">
-          Decision-tree quiz — answer 7, get one recommendation
+          Which GenAI certification is right for you? — 7 questions, one recommendation
         </h3>
         <span className="rounded-full bg-primary-soft px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
           {answered} / {questions.length} answered
@@ -515,39 +741,41 @@ export function DecisionQuiz() {
         ))}
       </div>
 
-      <div
-        aria-live="polite"
-        className="mt-8 rounded-xl border border-primary/25 bg-primary-soft/70 p-5"
-      >
-        {result ? (
-          <div className="animate-fade-up">
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
-              Your match
-            </span>
-            <p className="mt-2 text-xl leading-snug text-foreground">{result.pick}</p>
-            <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
-              {result.reason}
-            </p>
-          </div>
-        ) : (
-          <p className="text-[15px] leading-relaxed text-muted-foreground">
-            Answer all seven questions and your recommendation appears here — one pick, one reason,
-            no email required.
-          </p>
-        )}
-      </div>
-      {answered > 0 ? (
+      <div className="mt-8 flex flex-wrap items-center gap-3" aria-live="polite">
         <button
           type="button"
-          onClick={() => setAnswers({})}
-          className="mt-4 text-xs font-semibold uppercase tracking-wider text-primary underline-offset-4 hover:underline"
+          disabled={!result}
+          onClick={() => setOpen(true)}
+          className={
+            result
+              ? "inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary-glow px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform duration-200 hover:-translate-y-0.5"
+              : "inline-flex cursor-not-allowed items-center gap-2 rounded-lg border border-border bg-muted px-5 py-3 text-sm font-semibold text-muted-foreground"
+          }
         >
-          Reset answers
+          {result ? "Show my recommendation →" : `Answer ${questions.length - answered} more`}
         </button>
-      ) : null}
+        {answered > 0 ? (
+          <button
+            type="button"
+            onClick={() => {
+              setAnswers({});
+              setOpen(false);
+            }}
+            className="text-xs font-semibold uppercase tracking-wider text-primary underline-offset-4 hover:underline"
+          >
+            Reset answers
+          </button>
+        ) : null}
+        <span className="text-xs text-muted-foreground">
+          No email required. One pick, its key details and the official link.
+        </span>
+      </div>
+
+      {open && result ? <ResultModal result={result} onClose={() => setOpen(false)} /> : null}
     </div>
   );
 }
+
 
 /* ------------------------------------------------------------------ */
 /* Interactive pre-enrollment checklist                                */

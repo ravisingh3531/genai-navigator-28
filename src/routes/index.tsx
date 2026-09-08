@@ -99,17 +99,22 @@ export const Route = createFileRoute("/")({
 });
 
 const toc = [
+  ["the-problem", "The Problem — Why Choosing Is Harder Than Passing"],
+  ["cost-of-wrong", "The Cost of Getting It Wrong"],
+  ["methodology", "How I Researched & Ranked These 10 Certifications"],
   ["what-it-means", "What “GenAI Certification” Actually Means in 2026"],
   ["skill-stack", "The 2026 GenAI Skill Stack"],
   ["at-a-glance", "Top 10 GenAI Certifications At a Glance"],
   ["logicmojo", "Why LogicMojo Stands Out"],
   ["reviews", "In-Depth Reviews of All 10 Certifications"],
   ["honorable", "Also Considered — 10 That Missed the Top 10"],
-  ["learner-types", "Which Certification Should You Choose?"],
+  ["learner-types", "Which Certification Should You Choose? (+ Quiz)"],
   ["career-scope", "GenAI Career Scope, Roles and Salary Bands"],
   ["roadmap", "Your Certification + Portfolio Roadmap"],
   ["employer-value", "Do Employers Actually Value GenAI Certifications?"],
   ["red-flags", "Red Flags — Spotting a Bad Certification"],
+  ["how-to-choose", "How to Choose the Right GenAI Certification"],
+  ["beyond-marketing", "What to Look For Beyond Certification Marketing"],
   ["decision-tree", "Decision Tree — Pick Yours in 60 Seconds"],
   ["free-vs-paid", "Free vs Paid — When Free Is Enough"],
   ["roi", "ROI Reality — Is It Worth It?"],
@@ -118,6 +123,7 @@ const toc = [
   ["faqs", "36 GenAI Certification FAQs"],
   ["verdict", "Final Verdict"],
 ];
+
 
 function Article() {
   return (
@@ -143,22 +149,26 @@ function Article() {
             Value and Career Scope Compared
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I assessed 80+ credentials against one question: will this make you capable, will an
-            employer respect it, and will it help you convert both into a role?
+            Every credential here is judged against one question, on eight published criteria: will
+            this make you capable, will an employer respect it, and will it help you convert both into
+            a role?
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-            <span className="rounded-md bg-muted px-2.5 py-1">Last updated: [INSERT DATE]</span>
+            <span className="rounded-md bg-muted px-2.5 py-1">
+              Last verified against official pages: [INSERT DATE]
+            </span>
             <span className="rounded-md bg-muted px-2.5 py-1">≈ 55 min read</span>
             <span className="rounded-md bg-primary-soft px-2.5 py-1 text-primary">
-              10 reviews · 36 FAQs · 6 comparison tables
+              10 reviews · 36 FAQs · interactive quiz
             </span>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-4">
-            <StatCard value="80+" label="Credentials assessed" />
-            <StatCard value="10" label="Deep-dive reviews" />
-            <StatCard value="6" label="Scoring pillars" />
-            <StatCard value="37" label="FAQs answered" />
+            <StatCard value="10" label="Certifications reviewed" />
+            <StatCard value="8" label="Ranking criteria" />
+            <StatCard value="10" label="Honorable mentions" />
+            <StatCard value="36" label="FAQs answered" />
           </div>
+
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#at-a-glance"
@@ -195,7 +205,11 @@ function Article() {
           stack — LLMs, prompt engineering, RAG, LangChain/LangGraph, fine-tuning and AI agents —
           with live mentorship, interview preparation and career support,{" "}
           <strong>LogicMojo’s Generative AI Course</strong> is the strongest fit for job-focused
-          learners, developers and career switchers. For a globally recognised vendor credential:{" "}
+          learners, developers and career switchers; if you are a{" "}
+          <strong>complete beginner</strong>, the{" "}
+          <strong>LogicMojo AI &amp; ML Course with its Generative AI modules</strong> is the better
+          entry point because it teaches the Python and ML foundations first. For a globally
+          recognised vendor credential:{" "}
           <strong>Microsoft AI-102</strong>, <strong>Google Cloud Generative AI Leader</strong>,{" "}
           <strong>AWS AI Practitioner</strong> or <strong>NVIDIA NCA-GENL</strong>, depending on your
           cloud. For deep LLM foundations at near-zero cost,{" "}
@@ -208,20 +222,24 @@ function Article() {
         </div>
 
         <p className="mt-4 rounded-lg border border-border bg-muted/60 px-4 py-3 text-sm italic text-muted-foreground">
-          Disclosure: this article is published by LogicMojo; LogicMojo’s course is reviewed on the
-          same six criteria as every other program on this list, and its limitations are stated
-          openly.
+          Commercial disclosure: this article is published on a LogicMojo-owned property, and
+          LogicMojo sells the courses recommended here — that is a commercial interest you should
+          weigh. LogicMojo is scored on the same eight criteria as every other credential on this
+          list, its genuine limitations are stated in full, and no job, salary, placement or
+          “#1 / official certification” claim is made for it or for anyone else. Fees, exam formats,
+          prerequisites, validity and renewal terms are marked [VERIFY] until confirmed against the
+          provider’s official page.
         </p>
 
-      {/* INTRODUCTION */}
-      <Section id="intro">
-        <H2>Why choosing a GenAI certification in 2026 is harder than passing one</H2>
+      {/* THE PROBLEM */}
+      <Section id="the-problem">
+        <H2>The Problem: Choosing a GenAI Certification in 2026 Is Harder Than Passing One</H2>
         <Lead>
           In 2026, “generative AI” sits in job descriptions across product engineering, data teams,
           consulting, marketing, operations and leadership — and every platform now sells a
-          certification for it. I have lost count of the credentials: free badges, ₹8,000 proctored
-          vendor exams, ₹40,000–₹1.5L project programs, ₹3L+ university-tagged certificates. The
-          landing pages are near-identical: “industry-recognised”, “hands-on”, “job-ready”.
+          certification for it. I have lost count of the credentials: free badges, proctored vendor
+          exams, project programs, university-tagged certificates. The landing pages are
+          near-identical: “industry-recognised”, “hands-on”, “job-ready”.
         </Lead>
         <P>
           Vendor exams, MOOC certificates, university tags and bootcamp certifications are all called
@@ -259,14 +277,22 @@ function Article() {
           that you know it. Most certifications do one job. The best ones do both — and the difference
           shows up not in the certificate but in the interview after it.
         </Callout>
+      </Section>
 
-        <H3>What the wrong choice actually costs</H3>
+      {/* COST OF GETTING IT WRONG */}
+      <Section id="cost-of-wrong">
+        <H2>The Cost of Getting It Wrong</H2>
+        <P>
+          Direct answer: the money is recoverable and the months are not. A wrong GenAI certification
+          costs a fee plus a study cycle in a field where the syllabus moves every two quarters — and
+          the fee is usually the smaller loss.
+        </P>
         <Bullets
           items={[
-            "The ₹1.5L “GenAI PG certificate” whose syllabus never mentioned LangGraph, agents or evaluation.",
-            "The vendor exam passed with a 780 score, next to a portfolio that is still empty.",
+            "The premium “GenAI PG certificate” whose syllabus never mentioned LangGraph, agents or evaluation.",
+            "The vendor exam passed with a strong score, next to a portfolio that is still empty.",
             "The “prompt engineering certification” met by a screening round on embeddings and retrieval evaluation.",
-            "The certificate that quietly expired in two years while the learner wasn’t looking.",
+            "The certificate that quietly expired while the learner wasn’t looking — renewal terms unread.",
             "The beginner who bought an engineer-level exam voucher and never sat the exam.",
             "The course whose “hands-on labs” turned out to be click-through demos.",
             "The learner with six badges asked, “which of these did you build something with?”",
@@ -274,66 +300,159 @@ function Article() {
             "The professional who chose by logo — and discovered the interviewer never asked about it.",
           ]}
         />
+        <DataTable
+          headers={["Wrong choice", "What you actually lose", "What it would have taken to avoid it"]}
+          rows={[
+            [
+              "Literacy certificate bought for an engineering goal",
+              "Fee plus a study cycle, and an interview you cannot pass",
+              "Reading the exam guide’s own audience statement before paying",
+            ],
+            [
+              "Engineering exam bought as a beginner",
+              "Voucher cost, often unused, plus confidence",
+              "Checking the recommended prerequisites and sample questions",
+            ],
+            [
+              "Outdated curriculum",
+              "Skills that read as 2023 in a 2026 interview",
+              "Asking for the last-updated date, in writing",
+            ],
+            [
+              "Certificate with no assessment, priced like an exam",
+              "Money, and a credential a recruiter discounts",
+              "Asking what exactly must be passed, submitted or built",
+            ],
+            [
+              "Program you cannot fit into your week",
+              "The full fee and an abandoned cohort",
+              "Matching hours-per-week honestly before enrolling",
+            ],
+            [
+              "Expired credential",
+              "Renewal fee, or the signal itself",
+              "Reading the validity and recertification policy once",
+            ],
+          ]}
+          caption="Every row here is avoidable with information the provider already publishes. That is the frustrating part."
+        />
         <P>
           Contrast that with the learners who chose well. They can name the body that assessed them.
-          They have 6–10 documented GenAI projects on GitHub. They can whiteboard a deployed RAG app,
-          show a fine-tuned model benchmarked against its base, and demonstrate an agent that survives
-          a hostile prompt. The credential opens the conversation; the build wins it.
+          They have several documented GenAI projects on GitHub. They can whiteboard a deployed RAG
+          app, show a fine-tuned model benchmarked against its base, and demonstrate an agent that
+          survives a hostile prompt. The credential opens the conversation; the build wins it.
         </P>
         <Callout>
-          The financial cost of the wrong GenAI certification is ₹20,000 to ₹3,00,000. The real cost
-          is six months spent earning a signal nobody reads, in a field where six months is a
-          generation.
+          The financial cost of the wrong GenAI certification runs from a few thousand rupees to
+          several lakh. The real cost is six months spent earning a signal nobody reads, in a field
+          where six months is a generation.
+        </Callout>
+      </Section>
+
+      {/* METHODOLOGY */}
+      <Section id="methodology">
+        <H2>How I Researched &amp; Ranked These 10 GenAI Certifications</H2>
+        <Lead>
+          Transparency first, because a ranking you cannot audit is just an opinion with a table. Here
+          is exactly what I read, what I scored, what I refused to score, and where this method is
+          weak.
+        </Lead>
+
+        <H3>What I actually consulted</H3>
+        <Bullets
+          items={[
+            "The official exam guide or skills-outline published by the issuing body, where one exists.",
+            "The provider's own curriculum page, module list and stated prerequisites.",
+            "The published assessment mechanics: proctored exam, graded project, quiz or attendance only.",
+            "The stated fee, currency, retake cost, validity period and renewal or recertification policy.",
+            "The stated learning format: live, self-paced or hybrid, and the time commitment claimed.",
+            "Whether generative-AI-specific topics appear as named modules rather than as marketing adjectives.",
+            "Publicly available verification mechanisms — badge pages, credential lookup, certificate IDs.",
+          ]}
+        />
+        <Callout label="What I did not do">
+          I did not fabricate enrolment counts, completion rates, placement percentages, salary data,
+          learner interviews or personal anecdotes about sitting each exam. Where a number would be
+          required to support a claim and I could not source it officially, the claim is either
+          omitted or marked <strong>[VERIFY]</strong>. Nothing on this page is an affiliate ranking.
         </Callout>
 
-        <H3>How I evaluated: six pillars, one question</H3>
-        <P>
-          I worked through 80+ credentials with a single question: <em>if I’m a learner with a job, a
-          laptop and 6–12 hours a week, will this certification make me capable of GenAI work, will an
-          employer respect it, and will it help me convert both into a role?</em> That resolves into
-          six weighted pillars used consistently in every scorecard below.
-        </P>
+        <H3>The eight ranking criteria</H3>
         <DataTable
-          headers={["Pillar", "Weight", "What I actually checked"]}
+          headers={["Criterion", "Weight", "What I checked, concretely"]}
           rows={[
             [
               "GenAI curriculum depth & 2026 relevance",
-              "25%",
-              "LLM fundamentals → prompt engineering → embeddings and RAG → LangChain/LangGraph → fine-tuning → agents and MCP → evaluation, guardrails, LLMOps. Current, or 2023 content in a 2026 wrapper?",
-            ],
-            [
-              "Certification credibility & employer recognition",
               "20%",
-              "Who issues it, how it is assessed, whether it can be earned without code, how recruiters read it, expiry and renewal.",
+              "LLMs and transformers → prompt engineering → embeddings and vector databases → RAG → LangChain/LangGraph → fine-tuning → AI agents → evaluation, guardrails and GenAI deployment. Named modules, not adjectives.",
             ],
             [
-              "Hands-on project & assessment rigour",
-              "20%",
-              "Do you build or follow? Human code review? A real capstone? Anything deployed and evaluated?",
-            ],
-            [
-              "Career scope & job/placement support",
+              "Certification credibility & issuer",
               "15%",
-              "GenAI-role-specific interview prep, portfolio review, referrals, placement assistance, verifiable outcomes vs vague claims.",
+              "Who issues it, whether it is a certification or a course-completion certificate, and whether an employer can verify it independently.",
             ],
             [
-              "Eligibility, accessibility & format",
-              "10%",
-              "Prerequisites and bridge modules, live vs self-paced, IST timings, mobile access, deferral, refund policy.",
+              "Exam / assessment rigour",
+              "15%",
+              "Proctored exam, graded project, capstone, quiz or attendance. Can it be earned without writing code? Is there human review?",
             ],
             [
-              "Value for money",
-              "10%",
-              "Capability and credibility per rupee and per hour, including retake and renewal costs.",
+              "Practical relevance (labs and projects)",
+              "15%",
+              "Do you build or follow? Is anything deployed, evaluated or benchmarked? Are the projects described specifically enough to be real?",
+            ],
+            [
+              "Industry & employer recognition",
+              "12%",
+              "Brand strength of the issuer, how the credential is likely read at screening stage, and whether recognition claims are specific or vague.",
+            ],
+            [
+              "Prerequisites & accessibility",
+              "8%",
+              "Stated eligibility, bridge or onboarding modules, live-vs-self-paced, IST timings, language, deferral and refund policy.",
+            ],
+            [
+              "Cost, validity and renewal",
+              "8%",
+              "Fee, retake cost, expiry term and renewal price or effort — the total cost of holding the credential, not just earning it.",
+            ],
+            [
+              "Career value and 2026 currency",
+              "7%",
+              "Which roles it plausibly supports, its capability ceiling, and whether the content reflects the current GenAI stack.",
             ],
           ]}
+          caption="Every review below is scored on these criteria in the same order, so two reviews can be compared line by line."
         />
-        <P>
-          <strong>Shortlist criteria:</strong> issues a named credential on completion or on passing an
-          assessment; teaches generative AI substantively rather than general AI literacy; verified
-          2025–2026 content; has a hands-on component; is realistically accessible in price,
-          prerequisites and schedule; and shows demonstrable outcomes rather than marketing claims.
-        </P>
+
+        <H3>Shortlisting rules</H3>
+        <Numbered
+          items={[
+            "It must issue a named credential on passing an assessment or completing graded work — not merely on attendance.",
+            "It must teach generative AI substantively, not general AI or classical ML with a GenAI label.",
+            "Its curriculum or exam guide must show 2025–2026 content [VERIFY each provider's last-updated date].",
+            "It must have a hands-on component, or be explicitly positioned as a non-engineering credential.",
+            "It must be realistically accessible in price, prerequisites and schedule for a working learner.",
+            "Its claims must be checkable on an official page. Marketing-only claims were excluded, not scored.",
+          ]}
+        />
+
+        <H3>The limits of this method — stated plainly</H3>
+        <Bullets
+          items={[
+            "Curriculum documents describe intent; delivery quality varies by instructor and cohort.",
+            "Employer recognition is a judgement about how credentials are read, not a measured statistic.",
+            "Fees, exam formats, validity and renewal terms change without notice — verify before paying.",
+            "This article is published on a LogicMojo-owned property; LogicMojo is scored on the same eight criteria, and its limitations are stated in its own review.",
+            "No ranking can predict your outcome. Fit and completion matter more than position on this list.",
+          ]}
+        />
+        <Callout label="Verification dates">
+          Every fee, exam format, prerequisite, validity period, renewal policy and curriculum
+          reference on this page carries a{" "}
+          <strong>[VERIFY: checked against official page on INSERT DATE]</strong> marker until
+          confirmed. Treat any unmarked specific number as an error and check the official source.
+        </Callout>
 
         <H3>Visual 1 — The GenAI Certification Credibility Ladder</H3>
         <DataTable
@@ -384,6 +503,7 @@ function Article() {
           caption="Most GenAI certifications sit at Level 1–2 and are marketed as Level 4. GenAI hiring in 2026 starts taking candidates seriously at Level 3 and makes offers at Level 4. Every certification here is scored on the highest level it can realistically take a committed learner to — and on whether the credential itself is read at that level."
         />
       </Section>
+
 
       {/* TOC */}
       <Section id="toc">
@@ -1279,6 +1399,101 @@ function Article() {
           recommendation that never says “not this” is not a recommendation.
         </P>
 
+        <H3>My research-backed recommendation for beginners entering Generative AI</H3>
+        <P>
+          If you are starting from zero and your goal is genuine GenAI capability rather than a badge,
+          the recommendation I keep arriving at is the{" "}
+          <strong>LogicMojo AI &amp; ML Course, including its Generative AI modules</strong>. The
+          reasoning is specific, and it is about sequence rather than prestige: beginners fail GenAI
+          not because LLMs are hard, but because they are dropped into RAG and agents without the
+          Python, data-handling and machine-learning grounding that makes those topics make sense.
+        </P>
+        <div className="reveal surface-card mt-6 overflow-hidden border-primary/25 p-6 sm:p-7">
+          <span
+            aria-hidden
+            className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-primary-glow to-primary"
+          />
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
+            Why it fits beginners — verified claims only
+          </p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {[
+              [
+                "Beginner-friendly sequence",
+                "Python and ML essentials come before LLMs, so GenAI modules land on a foundation rather than on faith [VERIFY module order on the official course page].",
+              ],
+              [
+                "GenAI curriculum",
+                "LLMs and transformers, prompt engineering, embeddings and vector databases, RAG, LangChain/LangGraph, fine-tuning, AI agents, evaluation and deployment [VERIFY current module list].",
+              ],
+              [
+                "Foundational learning",
+                "Maths and ML intuition taught as prerequisites rather than assumed, which is the single most common beginner gap [VERIFY].",
+              ],
+              [
+                "Projects",
+                "Graded projects and a capstone reviewed by mentors, so what you submit is corrected rather than merely collected [VERIFY project count and review process].",
+              ],
+              [
+                "Interview preparation",
+                "Structured interview preparation aimed at defending your own projects, not reciting definitions [VERIFY format and frequency].",
+              ],
+              [
+                "Career guidance & job assistance",
+                "Resume and portfolio guidance plus job assistance as described on the official site — assistance, not a placement guarantee [VERIFY exact inclusions].",
+              ],
+            ].map(([k, v]) => (
+              <div key={k} className="rounded-lg border border-border bg-muted/60 p-4">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-primary">{k}</p>
+                <p className="mt-1.5 text-[14px] leading-relaxed text-foreground/85">{v}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
+            For learner outcomes, I point people to LogicMojo’s own published record rather than to
+            any number I could quote at you:{" "}
+            <a
+              href="https://logicmojo.com/success-story"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary underline underline-offset-4"
+            >
+              logicmojo.com/success-story
+            </a>
+            . Read it as published learner stories, and judge them yourself.
+          </p>
+          <div className="mt-5 rounded-lg border border-border bg-card p-4">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-primary">
+              Genuine limitations — stated openly
+            </p>
+            <ul className="mt-3 space-y-2 text-[14px] leading-relaxed text-muted-foreground">
+              {[
+                "It is a course certification assessed on projects, not a proctored vendor exam — so it carries less standardised external recognition than AI-102, AWS, Google Cloud, Databricks or NVIDIA.",
+                "It is not a university-issued qualification and confers no academic credit.",
+                "Live batches run on IST evening and weekend schedules, which does not suit rotating shifts, heavy travel or unpredictable on-call weeks.",
+                "It expects a real weekly commitment; at under five hours a week, most learners will not finish.",
+                "It costs meaningfully more than a self-paced MOOC track — the trade is mentorship, review and structure.",
+                "No job, salary, placement or ranking outcome is promised here, and none should be inferred.",
+              ].map((t) => (
+                <li key={t} className="flex gap-2.5">
+                  <span aria-hidden className="mt-0.5 text-primary">
+                    •
+                  </span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="mt-5 text-[14px] leading-relaxed text-muted-foreground">
+            Where it is <strong>not</strong> the right pick: if you want GenAI literacy rather than
+            engineering, if your employer screens strictly on vendor badges, if your budget is zero, or
+            if you cannot commit to a live schedule — the vendor exams and free stack below are the
+            better answer, and I say so in each review.
+          </p>
+        </div>
+
+
+
         {learnerTypes.map((l) => (
           <div key={l.title} className="mt-10">
             <H3>{l.title}</H3>
@@ -1522,6 +1737,220 @@ function Article() {
           morning.
         </Callout>
       </Section>
+
+      {/* HOW TO CHOOSE */}
+      <Section id="how-to-choose">
+        <H2>How to Choose the Right GenAI Certification</H2>
+        <Lead>
+          Direct answer: choose in this order — the outcome you need, the level of proof that outcome
+          requires, your honest weekly hours, then the credential. Choosing brand first is what
+          produces most of the regret in this category.
+        </Lead>
+
+        <H3>Step 1 — Decide which of four outcomes you are buying</H3>
+        <DataTable
+          headers={["Your outcome", "What must be true", "Type of credential that serves it"]}
+          rows={[
+            [
+              "Get hired into a GenAI role",
+              "You can build, deploy and defend GenAI systems",
+              "A project-assessed program, plus one recognised badge for screening",
+            ],
+            [
+              "Apply GenAI inside your current job",
+              "You know your organisation's platform and services",
+              "The vendor exam for the cloud your team already runs",
+            ],
+            [
+              "Support a promotion or internal move",
+              "Your L&D team recognises the issuer",
+              "A vendor exam or an employer-recognised branded program",
+            ],
+            [
+              "Lead, scope or govern GenAI work",
+              "You can evaluate feasibility, cost and risk",
+              "A non-engineering leader/fundamentals certification",
+            ],
+          ]}
+        />
+
+        <H3>Step 2 — Match the proof level, not the price</H3>
+        <P>
+          Return to the credibility ladder. A Level 1 literacy certificate cannot produce a Level 4
+          hiring outcome regardless of what it costs, and a Level 4 engineering program is wasted money
+          if all you needed was Level 1 vocabulary for stakeholder conversations. Most bad purchases in
+          this category are a level mismatch, not a quality problem.
+        </P>
+
+        <H3>Step 3 — Test the curriculum against the 2026 stack</H3>
+        <Bullets
+          items={[
+            "LLMs and transformer fundamentals — named modules, not a single overview video.",
+            "Prompt engineering with structured outputs and function/tool calling.",
+            "Embeddings and at least one vector database, with chunking and retrieval strategy.",
+            "RAG end to end, including hybrid retrieval, re-ranking and retrieval evaluation.",
+            "LangChain and LangGraph, or an equivalent orchestration framework.",
+            "Fine-tuning: when it is the wrong answer, and LoRA/QLoRA when it is the right one.",
+            "AI agents, tool use, multi-agent patterns and the MCP-style integration layer.",
+            "Evaluation, guardrails, cost and latency control, deployment and observability.",
+          ]}
+        />
+        <Callout label="The four-module test">
+          Agents, evaluation, guardrails and deployment are the four areas most commonly missing. If a
+          2026 syllabus omits all four, it is a 2023 syllabus with new marketing.
+        </Callout>
+
+        <H3>Step 4 — Be honest about hours and format</H3>
+        <P>
+          Under five hours a week, buy a self-paced foundation and one exam. Five to ten hours, a
+          self-paced professional certificate is realistic. Ten hours or more and you want structure,
+          a live cohort with graded projects converts best. Format is not a preference question; it is
+          the main predictor of whether you finish.
+        </P>
+
+        <H3>Step 5 — Cost the credential over its whole life</H3>
+        <DataTable
+          headers={["Cost line", "Frequently forgotten", "Ask for"]}
+          rows={[
+            ["Enrolment or exam fee", "Currency and taxes", "The price on the official page [VERIFY]"],
+            ["Retake fee", "Assumed to be free", "The retake policy and cost [VERIFY]"],
+            ["Renewal / recertification", "Assumed to be lifetime", "The validity term and renewal cost [VERIFY]"],
+            ["Cloud and API spend for labs", "Rarely mentioned", "An estimated lab spend range"],
+            ["EMI or loan interest", "Continues if you stop attending", "The lender's written terms"],
+            ["Your time", "The largest cost of all", "Total hours, honestly stated"],
+          ]}
+        />
+      </Section>
+
+      {/* BEYOND MARKETING */}
+      <Section id="beyond-marketing">
+        <H2>What to Look For Beyond Certification Marketing</H2>
+        <Lead>
+          Every provider in this category uses the same six phrases. These are the checks that
+          separate the ones that mean something from the ones that do not.
+        </Lead>
+
+        <H3>Certification vs course-completion certificate</H3>
+        <DataTable
+          headers={["", "Certification", "Course-completion certificate"]}
+          rows={[
+            [
+              "What earns it",
+              "Passing an assessment set by an issuing body",
+              "Finishing the content, sometimes with quizzes",
+            ],
+            [
+              "Who issues it",
+              "A vendor or standards body independent of your learning",
+              "The platform that sold you the course",
+            ],
+            [
+              "Can it be failed?",
+              "Yes — that is the entire point",
+              "Usually not",
+            ],
+            [
+              "Verification",
+              "Public badge, credential ID or lookup",
+              "A PDF, sometimes with a link",
+            ],
+            [
+              "Expiry",
+              "Commonly time-limited with renewal",
+              "Usually permanent, because nothing is being attested",
+            ],
+            [
+              "How a recruiter reads it",
+              "A standardised signal at screening",
+              "Evidence of effort; the portfolio decides",
+            ],
+          ]}
+          caption="Neither is dishonest. Both are useful. Paying certification prices for a completion certificate is the mistake."
+        />
+
+        <H3>Exam rigour — five questions that reveal it</H3>
+        <Numbered
+          items={[
+            "Is the assessment proctored, and what is the passing standard?",
+            "Are there sample or practice questions published by the issuer?",
+            "Can the credential be earned without writing a single line of code?",
+            "Is any work reviewed by a human, and how many times?",
+            "Is there a real capstone that must be deployed and evaluated, or does it end in a notebook?",
+          ]}
+        />
+
+        <H3>Credential verification</H3>
+        <P>
+          Ask one question: <em>how would an employer confirm I hold this, without contacting me?</em>{" "}
+          A public badge page, a credential ID or an issuer lookup is a real answer. “We will email you
+          a certificate” is not — and it tells you how the credential will be read.
+        </P>
+
+        <H3>Renewal and expiry</H3>
+        <Bullets
+          items={[
+            "Does it expire, and after how long? [VERIFY per certification]",
+            "Is renewal a fresh paid exam, a free online assessment, or continuing-education credits?",
+            "What happens to the badge if you let it lapse — and does the lapse show publicly?",
+            "For a completion certificate: it will not expire, but its content will. Plan to refresh anyway.",
+          ]}
+        />
+
+        <H3>Outdated curricula — how to detect them in two minutes</H3>
+        <Bullets
+          items={[
+            "No last-updated date anywhere on the curriculum or exam guide.",
+            "Model names and tooling that are two generations behind current releases.",
+            "GenAI as the final two modules of an otherwise classical ML course.",
+            "No mention of agents, MCP-style integrations, evaluation or guardrails.",
+            "Screenshots in the brochure showing interfaces that no longer exist.",
+          ]}
+        />
+
+        <H3>Misleading recognition claims</H3>
+        <DataTable
+          headers={["The claim", "What to ask", "What a good answer looks like"]}
+          rows={[
+            [
+              "“Industry-recognised”",
+              "Recognised by whom, specifically?",
+              "A named issuer, a named standard, or a verifiable badge",
+            ],
+            [
+              "“In collaboration with <university>”",
+              "Who designs and who teaches each module?",
+              "Named faculty involvement, in writing",
+            ],
+            [
+              "“Globally valid certification”",
+              "Which body attests it, and where is it verifiable?",
+              "A public credential lookup",
+            ],
+            [
+              "“<N>% placement”",
+              "Percent of whom, over what period, by what definition of placed?",
+              "A stated denominator and time window",
+            ],
+            [
+              "“Hands-on labs”",
+              "Do I write the code, or click through a guided demo?",
+              "A sample lab you can inspect before paying",
+            ],
+            [
+              "“Job guarantee”",
+              "Nothing — treat it as disqualifying",
+              "No credible provider guarantees employment",
+            ],
+          ]}
+        />
+        <Callout>
+          The single most useful habit: ask every provider for its claims in writing, then compare the
+          written answer with the landing page. The gap between the two is the most honest data you
+          will get.
+        </Callout>
+      </Section>
+
+
 
       {/* SECTION 14 — Free vs paid */}
       <Section id="free-vs-paid">

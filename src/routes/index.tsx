@@ -53,18 +53,68 @@ const toc = [
 
 function Article() {
   return (
-    <main className="mx-auto max-w-4xl px-5 pb-24 pt-12 sm:px-8">
-      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-        GenAI Certifications · 2026 Edition
-      </p>
-      <h1 className="mt-4 text-4xl leading-[1.08] text-foreground sm:text-5xl">
-        Top 10 Best GenAI Certification Courses (2026) — LLMs, Prompt Engineering, RAG, LangChain,
-        Fine-Tuning, AI Agents, Fees, Certification Value and Career Scope Compared
-      </h1>
+    <div className="relative overflow-hidden">
+      {/* Ambient background */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[image:var(--gradient-surface)]" />
+        <div className="grid-paper absolute inset-x-0 top-0 h-[720px] opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
+        <div className="absolute -left-32 top-10 size-[420px] animate-float rounded-full bg-primary/15 blur-3xl" />
+        <div className="absolute -right-24 top-64 size-[360px] animate-float rounded-full bg-primary-glow/20 blur-3xl [animation-delay:2s]" />
+      </div>
 
-      <div className="mt-8 rounded-xl border-2 border-accent/40 bg-card p-6 shadow-sm">
-        <div className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Quick Answer</div>
-        <p className="mt-3 text-base leading-relaxed text-foreground/90">
+      <main className="mx-auto max-w-4xl px-5 pb-24 pt-14 sm:px-8">
+        {/* HERO */}
+        <header className="animate-fade-up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card/80 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary backdrop-blur">
+            <span aria-hidden className="size-2 animate-pulse rounded-full bg-primary" />
+            GenAI Certifications · 2026 Edition
+          </div>
+          <h1 className="mt-6 text-4xl leading-[1.08] text-foreground sm:text-[3.4rem]">
+            Top 10 Best <span className="gradient-text">GenAI Certification Courses</span> (2026) —
+            LLMs, Prompt Engineering, RAG, LangChain, Fine-Tuning, AI Agents, Fees, Certification
+            Value and Career Scope Compared
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            I assessed 80+ credentials against one question: will this make you capable, will an
+            employer respect it, and will it help you convert both into a role?
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-4">
+            <StatCard value="80+" label="Credentials assessed" />
+            <StatCard value="10" label="Deep-dive reviews" />
+            <StatCard value="6" label="Scoring pillars" />
+            <StatCard value="37" label="FAQs answered" />
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#at-a-glance"
+              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary-glow px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              See the ranked comparison →
+            </a>
+            <a
+              href="#faqs"
+              className="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-card px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary-soft"
+            >
+              Jump to the FAQs
+            </a>
+          </div>
+        </header>
+
+        <div className="reveal surface-card relative mt-12 overflow-hidden border-primary/25 p-6 sm:p-7">
+          <span
+            aria-hidden
+            className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-primary-glow to-primary"
+          />
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            <span
+              aria-hidden
+              className="flex size-6 items-center justify-center rounded-md bg-primary-soft text-sm"
+            >
+              ⚡
+            </span>
+            Quick Answer
+          </div>
+          <p className="mt-4 text-base leading-relaxed text-foreground/90">
           The <strong>best GenAI certification course</strong> in 2026 depends on what you need the
           credential to do. For a project-backed certification that teaches the complete engineering
           stack — LLMs, prompt engineering, RAG, LangChain/LangGraph, fine-tuning and AI agents —

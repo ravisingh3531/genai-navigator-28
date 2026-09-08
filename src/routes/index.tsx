@@ -1528,7 +1528,7 @@ function Article() {
       {/* Decision tree */}
       <Section id="decision-tree">
         <H2>Decision Tree — Pick Your GenAI Certification in 60 Seconds</H2>
-        <pre className="mt-6 overflow-x-auto rounded-lg border border-border bg-card p-5 text-sm leading-relaxed text-foreground">
+        <pre className="reveal surface-card mt-6 overflow-x-auto bg-primary-soft/50 p-6 text-sm leading-relaxed text-foreground">
 {`Do you need to BUILD GenAI systems in your role?
 ├─ No → Do you scope, buy or govern GenAI projects?
 │        ├─ Yes → Google Cloud Generative AI Leader (+ AWS AI Practitioner)

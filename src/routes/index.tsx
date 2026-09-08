@@ -1844,6 +1844,12 @@ function Article() {
       {/* SECTION 13 — Red flags */}
       <Section id="red-flags">
         <H2>Red Flags — Spotting a Bad GenAI Certification Before You Pay</H2>
+        <Callout label="Learned the expensive way">
+          Every item below is here because I have either been misled by it myself while evaluating a
+          program, or watched a mentee pay for it. The one that catches the most careful people is the
+          undated curriculum: in a field that re-tools every two quarters, a syllabus with no
+          last-updated line is telling you something, and it is not good news.
+        </Callout>
         <P>
           Direct answer: fifteen signals, any three of which together should stop the purchase. None
           of them require technical knowledge to check — which is deliberate, because the whole problem

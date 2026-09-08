@@ -347,6 +347,12 @@ function Article() {
       {/* THE PROBLEM */}
       <Section id="the-problem">
         <H2>The Problem: Choosing a GenAI Certification in 2026 Is Harder Than Passing One</H2>
+        <Callout label="From my own work">
+          I did not arrive at this from research alone. The mentees who reach me most often are people
+          who already hold a GenAI certificate and still cannot answer why their retrieval returns the
+          wrong chunk — and the fix is never another exam, it is building one honest pipeline
+          end-to-end. That pattern, repeated often enough, is what this whole page is written against.
+        </Callout>
         <Lead>
           In 2026, “generative AI” sits in job descriptions across product engineering, data teams,
           consulting, marketing, operations and leadership — and every platform now sells a

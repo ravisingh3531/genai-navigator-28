@@ -1141,550 +1141,491 @@ function Article() {
       </Section>
 
       {/* SECTION 7 — reviews */}
+      {/* SECTION 7 — In-depth reviews */}
       <Section id="reviews">
-        <H2>Detailed Reviews of All 10 GenAI Certifications (2026)</H2>
+        <H2>In-Depth Reviews — Top 10 Best GenAI Certification Courses (2026)</H2>
+        <Lead>
+          Every review below uses the identical twelve-part structure — overview, certification
+          details, curriculum depth verdict, delivery, projects, fees, employer recognition, career
+          support, ideal learner, who should avoid it, pros and cons, and a six-pillar rating with a
+          capability ceiling. The top pick gets no extra space and the lower ranks get no less.
+        </Lead>
         <P>
-          Each review uses the same six pillars, states the capability ceiling honestly, and names who
-          should skip it. Scores are out of 10 against this article’s weighting.
+          Scores are out of 10 against this article’s weighting, and the capability ceiling matters
+          more than the overall number: it tells you the highest rung on the credibility ladder this
+          credential can realistically evidence. Every fee, duration and module reference carries
+          [VERIFY] until confirmed against the provider’s current official page.
         </P>
 
-        <Scorecard
-          rank={1}
-          name="LogicMojo — Generative AI Course"
-          best="Best project-backed GenAI certification for job-focused learners, developers and career switchers"
-          type="Project-based course certification (graded projects + capstone + mentor review)"
-          score="9.2 / 10"
-          fees="₹XX,XXX [VERIFY]; EMI available"
-          duration="X months [VERIFY], 10–15 hrs/week"
-          eligibility="Basic Python helpful; foundations covered from scratch"
-          level="Level 4–5"
-          pros={[
-            "Covers all seven 2026 layers hands-on, including agents, MCP, evaluation and LLMOps — rare in one program.",
-            "ML and Python foundations included, so beginners and non-tech switchers have a real onramp.",
-            "10–15 portfolio-grade projects plus a deployed capstone; human code review rather than auto-grading.",
-            "GenAI-specific interview preparation and project-defence practice, which is what actually converts.",
-            "Continuous content refresh — the syllabus tracks 2026 tooling rather than a 2023 snapshot.",
-          ]}
-          cons={[
-            "Brand recognition is far below Microsoft, Google, AWS or Purdue in an HR screen.",
-            "Live IST cohorts don’t suit rotating shifts, heavy travel or on-call weeks.",
-            "Demands genuine weekly hours; there is no shortcut version.",
-            "Fees, duration, placement scope and refund terms need verification against the current page.",
-          ]}
-          skip="Managers who never need to build; anyone whose employer specifically requires a named vendor certification; learners who want a two-week badge; researchers seeking an academic pathway."
-        />
-
-        <Scorecard
-          rank={2}
-          name="Microsoft Certified: Azure AI Engineer Associate (AI-102)"
-          best="Best vendor engineering certification for enterprise and Azure-first teams"
-          type="Vendor exam (proctored)"
-          score="8.4 / 10"
-          fees="~$165 / ₹XX,XXX [VERIFY]"
-          duration="6–10 weeks preparation"
-          eligibility="Azure basics; Python or C# helpful"
-          level="Level 2–3"
-          pros={[
-            "Genuine global recognition; frequently named directly in enterprise job descriptions.",
-            "Solid coverage of Azure OpenAI, Azure AI Search (RAG), content safety and agent services.",
-            "Credly badge and a verifiable credential ID that HR systems understand.",
-            "Excellent value if your organisation already runs on Azure.",
-          ]}
-          cons={[
-            "Tests platform services, not framework engineering — LangChain/LangGraph barely feature.",
-            "Passable by cramming question banks; produces no portfolio at all.",
-            "Annual renewal admin [VERIFY current policy].",
-            "Fine-tuning and agent depth are limited relative to a full GenAI program.",
-          ]}
-          skip="Career switchers with no cloud background; anyone whose main gap is building rather than platform knowledge; learners not working in an Azure environment."
-        />
-
-        <Scorecard
-          rank={3}
-          name="DeepLearning.AI × AWS — Generative AI with Large Language Models"
-          best="Best LLM fundamentals at near-zero cost"
-          type="MOOC certificate (auto-graded labs)"
-          score="8.2 / 10"
-          fees="Free to audit; ~₹3–4K/month for the certificate"
-          duration="3–4 weeks"
-          eligibility="Python and basic ML"
-          level="Level 2–3"
-          pros={[
-            "The clearest explanation of LLM training, scaling, instruction tuning, PEFT and RLHF anywhere at this price.",
-            "Three real labs on AWS infrastructure rather than pure theory.",
-            "Outstanding preparation before any vendor exam or engineering program.",
-            "Makes no career claims it can't keep — refreshing honesty.",
-          ]}
-          cons={[
-            "No LangChain, no agents, no MCP, no deployment — it is a foundations course, not a stack course.",
-            "RAG coverage is thin relative to what interviews ask.",
-            "Auto-graded only; nobody reviews your code.",
-            "Weak as a standalone credential on a resume.",
-          ]}
-          skip="Complete beginners without Python; anyone who needs a job-facing credential or career support as the primary outcome."
-        />
-
-        <Scorecard
-          rank={4}
-          name="IBM Generative AI Engineering Professional Certificate"
-          best="Best low-cost applied GenAI engineering track"
-          type="MOOC professional certificate"
-          score="7.9 / 10"
-          fees="Free to audit; ~₹3–4K/month"
-          duration="4–6 months"
-          eligibility="Python"
-          level="Level 2–3"
-          pros={[
-            "Broad applied coverage: LLMs, prompt engineering, embeddings, RAG, LangChain and a capstone.",
-            "8–12 guided labs mean you finish with code, not just notes.",
-            "IBM brand carries reasonable weight in Indian and global HR screens.",
-            "Exceptional cost-to-content ratio if you finish it.",
-          ]}
-          cons={[
-            "Guided labs are closer to following than building; the projects look identical across thousands of learners.",
-            "Agents, MCP and LLMOps are light for 2026 expectations.",
-            "No human feedback, no interview preparation, no career support.",
-            "Long duration on a monthly subscription quietly adds up.",
-          ]}
-          skip="Learners who need accountability to finish; anyone whose bottleneck is interview performance rather than knowledge."
-        />
-
-        <Scorecard
-          rank={5}
-          name="Google Cloud Generative AI Leader Certification"
-          best="Best leadership and business-level GenAI credential"
-          type="Vendor exam (proctored)"
-          score="7.6 / 10"
-          fees="~$99 / ₹XX,XXX [VERIFY]"
-          duration="3–6 weeks preparation"
-          eligibility="None"
-          level="Level 1–2"
-          pros={[
-            "A rare credential designed honestly for non-builders: strategy, use-case selection, governance and value.",
-            "Google Cloud brand recognition is very high with HR and leadership.",
-            "No coding prerequisite, so it is genuinely achievable for PMs, consultants and business leaders.",
-            "Cheap and fast relative to what it signals in a management context.",
-          ]}
-          cons={[
-            "Not an engineering credential and never claims to be — it will not survive a technical round.",
-            "Conceptual only: no RAG implementation, no frameworks, no projects.",
-            "Renewal every 3 years [VERIFY].",
-            "Frequently mis-sold by third-party trainers as a route into GenAI engineering roles.",
-          ]}
-          skip="Anyone targeting a GenAI engineer, ML engineer or AI developer role — you need Level 3–4 evidence, not literacy."
-        />
-
-        <Scorecard
-          rank={6}
-          name="AWS Certified AI Practitioner (AIF-C01)"
-          best="Best entry-level vendor certification for AWS-centric roles"
-          type="Vendor exam (proctored)"
-          score="7.4 / 10"
-          fees="~$100 / ₹XX,XXX [VERIFY]"
-          duration="4–6 weeks preparation"
-          eligibility="None"
-          level="Level 1–2"
-          pros={[
-            "Accessible first vendor credential with real brand weight, no coding required.",
-            "Good conceptual grounding in Bedrock, prompt patterns and responsible AI.",
-            "Useful for sales engineers, analysts, QA and non-engineers in AWS organisations.",
-            "Credly badge that recruiters recognise instantly.",
-          ]}
-          cons={[
-            "Foundational by design — it does not demonstrate engineering capability.",
-            "No projects, no frameworks, no fine-tuning depth.",
-            "3-year renewal cycle.",
-            "Often bought as a “GenAI job ticket”, which it is not.",
-          ]}
-          skip="Developers and ML practitioners who need a depth signal; anyone not in an AWS-centric environment."
-        />
-
-        <Scorecard
-          rank={7}
-          name="NVIDIA-Certified Associate: Generative AI LLMs (NCA-GENL)"
-          best="Best technically focused LLM associate exam"
-          type="Vendor exam (proctored)"
-          score="7.3 / 10"
-          fees="~$135 / ₹XX,XXX [VERIFY]"
-          duration="4–8 weeks preparation"
-          eligibility="Python and ML basics"
-          level="Level 2–3"
-          pros={[
-            "More technically demanding than the practitioner-level exams — transformers, training, data handling.",
-            "Strong signal for ML practitioners and anyone working near GPUs and NeMo.",
-            "NVIDIA's brand is highly credible in AI engineering circles.",
-            "DLI prep courses are genuinely instructive.",
-          ]}
-          cons={[
-            "No projects and no orchestration/agent coverage — you finish with a badge, not a build.",
-            "Ecosystem-flavoured toward the NVIDIA stack.",
-            "2-year renewal [VERIFY].",
-            "Preparation resources are thinner and more scattered than for AWS or Microsoft exams.",
-          ]}
-          skip="Complete beginners; business roles; anyone whose gap is application building rather than model-level concepts."
-        />
-
-        <Scorecard
-          rank={8}
-          name="Databricks Certified Generative AI Engineer Associate"
-          best="Best RAG and LLM-application certification for data-platform engineers"
-          type="Vendor exam (proctored)"
-          score="7.2 / 10"
-          fees="~$200 / ₹XX,XXX [VERIFY]"
-          duration="6–8 weeks preparation"
-          eligibility="Python plus Databricks familiarity"
-          level="Level 2–3"
-          pros={[
-            "The most RAG-centric vendor exam on this list — retrieval design, chunking, evaluation and governance.",
-            "Excellent fit if your organisation already runs Databricks or Unity Catalog.",
-            "Reads as a strong engineering signal for data-platform GenAI roles.",
-            "Covers application deployment concepts other exams skip.",
-          ]}
-          cons={[
-            "Tightly coupled to the Databricks platform; less portable than a framework-based skill set.",
-            "Highest exam fee here, plus workspace access for practice.",
-            "No graded projects; self-practice only.",
-            "2-year renewal cycle.",
-          ]}
-          skip="Anyone not working in a Databricks environment; complete beginners; learners whose priority is a portfolio."
-        />
-
-        <Scorecard
-          rank={9}
-          name="Purdue University × Simplilearn — Applied Generative AI Specialization"
-          best="Best university-branded program for corporate and employer-funded learners"
-          type="University-branded certificate (assignments + capstone)"
-          score="6.9 / 10"
-          fees="₹1–2L [VERIFY]; EMI, often no-cost"
-          duration="4–6 months"
-          eligibility="Basic programming helpful"
-          level="Level 2–3"
-          pros={[
-            "Purdue branding passes HR filters and internal promotion committees easily.",
-            "Structured cohort schedule with masterclasses and a capstone.",
-            "Career services and resume support included.",
-            "Very strong choice when an employer is paying.",
-          ]}
-          cons={[
-            "Curriculum depth does not match the fee: agents, MCP, LLMOps and fine-tuning are light for 2026.",
-            "University faculty do not teach every session — check who actually delivers.",
-            "Content refresh is slower than specialist providers.",
-            "Projects are largely templated, so portfolios look similar across learners.",
-          ]}
-          skip="Self-funded learners optimising for capability per rupee; developers who already need Level 4 depth."
-        />
-
-        <Scorecard
-          rank={10}
-          name="upGrad × IIIT-Bangalore — Generative AI program"
-          best="Best Indian university-affiliated GenAI credential"
-          type="University-affiliated certificate (assignments + capstone)"
-          score="6.7 / 10"
-          fees="₹1–2.5L [VERIFY]; EMI, often no-cost"
-          duration="4–8 months"
-          eligibility="Some technical comfort"
-          level="Level 2–3"
-          pros={[
-            "IIIT-Bangalore affiliation is well recognised by Indian HR teams and IT-services employers.",
-            "Strong structure, deadlines and mentor support keep working professionals moving.",
-            "Dedicated career-services team and job board.",
-            "6–10 assignments plus a capstone give you something to show.",
-          ]}
-          cons={[
-            "The most expensive route here for the GenAI depth delivered; agents, MCP and fine-tuning are limited.",
-            "Content refresh is slow relative to how fast the 2026 stack moves.",
-            "“Placement assistance” carries eligibility conditions worth reading closely.",
-            "Long EMI commitments on a program many learners abandon mid-way.",
-          ]}
-          skip="Anyone whose priority is engineering depth or budget efficiency; learners who won't use the academic tag for a promotion or HR filter."
-        />
+        {reviews.map((r) => (
+          <Review key={r.rank} data={r} />
+        ))}
       </Section>
 
-      {/* Learner types */}
+      {/* SECTION 8 — Also considered */}
+      <Section id="honorable">
+        <H2>Also Considered — 10 GenAI Certifications That Didn’t Make the Top 10 (And Why)</H2>
+        <P>
+          Direct answer: each of these is a defensible purchase for a specific reader, and none of
+          them survived the six-pillar comparison as a <em>primary</em> credential. I am including the
+          reasoning because a list that only names winners tells you nothing about how it was made.
+        </P>
+        <div className="mt-8 grid gap-5">
+          {mentions.map((m) => (
+            <MentionCard key={m.name} {...m} />
+          ))}
+        </div>
+        <Callout label="Read this honestly">
+          If one of these matches your situation better than anything in the top ten — you already
+          work in an Oracle shop, your employer will fund an IIM executive program, you only need
+          LangGraph competence this quarter — take it. Ranking is a general judgement; your context
+          beats it.
+        </Callout>
+      </Section>
+
+      {/* SECTION 9 — Experience-based solution */}
       <Section id="learner-types">
-        <H2>Best GenAI Certification for Each Learner Type</H2>
+        <H2>My Experience-Based Solution: Which GenAI Certification Should You Choose?</H2>
+        <Lead>
+          The single most useful thing I learned across this evaluation: the strongest 2026 profile is{" "}
+          <strong>one recognised credential plus one project-backed program</strong>. The weakest is
+          three badges and no build.
+        </Lead>
+        <P>
+          I have now read enough syllabi and sat enough sample assessments to be blunt about the
+          pattern. Learners who stall are almost never the ones who chose the “wrong” course; they are
+          the ones who chose a second credential when what they needed was a deployed project, or who
+          bought the deepest program on the list and then could not give it ten hours a week. Fit
+          beats prestige, and completion beats both.
+        </P>
+        <P>
+          So read the recommendations below as pairs rather than winners: a primary pick that does the
+          heavy lifting, a pairing that covers the gate the primary pick cannot clear, and one line on
+          why. I say explicitly where LogicMojo is the better fit and where it plainly is not — a
+          recommendation that never says “not this” is not a recommendation.
+        </P>
+
+        {learnerTypes.map((l) => (
+          <div key={l.title} className="mt-10">
+            <H3>{l.title}</H3>
+            <P>{l.body}</P>
+            <div className="reveal mt-5 grid gap-3 sm:grid-cols-3">
+              {[
+                ["Primary pick", l.primary],
+                ["Pair it with", l.pair],
+                ["Why", l.why],
+              ].map(([k, v]) => (
+                <div
+                  key={k}
+                  className="rounded-xl border border-border bg-card p-4 shadow-[var(--shadow-card)]"
+                >
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-primary">{k}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-foreground/85">{v}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        <H3>The quick reference table, if you want it in one view</H3>
         <DataTable
           headers={["If you are…", "Start with", "Add next", "Why"]}
           rows={[
-            ["A complete beginner with no coding background", "LogicMojo (foundations included)", "AWS AI Practitioner for a recognised badge", "You need Python and ML scaffolding before any exam-based credential is realistic."],
-            ["A working professional in non-AI tech (2–12 yrs)", "LogicMojo evening/weekend cohort", "Your employer's cloud vendor exam (AI-102 / Databricks)", "Capability plus a credential your current employer already recognises."],
-            ["A developer or ML practitioner", "DeepLearning.AI × AWS, then LogicMojo for the full stack", "NVIDIA NCA-GENL or Databricks", "You need depth on RAG, agents, fine-tuning and LLMOps, not literacy."],
-            ["A career switcher from a non-tech background", "LogicMojo (Python → ML → GenAI onramp)", "upGrad/IIIT-B only if you need an academic tag", "You need a full onramp plus interview prep, not a two-week badge."],
-            ["A job-focused student or fresher", "LogicMojo (projects + interview prep)", "One free vendor badge for the resume screen", "Recruiters hire on demonstrated builds; the badge only opens the screen."],
-            ["A manager, PM or consultant", "Google Cloud Generative AI Leader", "AWS AI Practitioner", "Scoping and governing LLM projects needs judgement, not QLoRA."],
-            ["A cloud or enterprise engineer", "Your platform's exam: AI-102, Databricks, AWS, NVIDIA", "A project-based program for build depth", "Match the credential to the platform your organisation runs on."],
-            ["An Indian learner watching budget", "IBM or DeepLearning.AI (₹0 audit) to test commitment", "LogicMojo with EMI once you're sure", "Prove you'll do the hours before committing rupees."],
-            ["A certificate collector with no portfolio", "Stop enrolling. Build 3 projects from what you already know", "One project-graded program", "Your gap is demonstrable output, not more badges."],
-            ["Someone burned by a “GenAI masterclass”", "Audit any syllabus with the seven-layer test", "Only programs with human code review", "The seven-layer audit exposes prompt-only courses in five minutes."],
+            ["A complete beginner with no coding background", "AWS AI Practitioner or Google Cloud GenAI Leader", "LogicMojo if you intend to build", "Literacy first is cheap; capability second is deliberate."],
+            ["A working professional in non-AI tech (2–12 yrs)", "Your organisation’s cloud vendor exam", "LogicMojo for live evening/weekend build structure", "Internal signal plus the capability your role is drifting toward."],
+            ["A developer or ML practitioner", "DeepLearning.AI × AWS for LLM internals", "LogicMojo, or Databricks/NVIDIA for a technical badge", "You need depth on RAG, agents, fine-tuning and LLMOps, not literacy."],
+            ["A career switcher from a non-tech background", "LogicMojo (Python → ML → GenAI onramp)", "upGrad/IIIT-B only if HR filters demand a tag", "Exam-only paths have no onramp; you need one."],
+            ["A job-focused student or fresher", "LogicMojo (projects + interview prep)", "One recognised vendor badge for the resume screen", "Projects and defence practice decide outcomes at this stage."],
+            ["A manager, PM or consultant", "Google Cloud Generative AI Leader", "AWS AI Practitioner + DeepLearning.AI short courses", "Scoping and governing LLM work needs judgement, not QLoRA."],
+            ["A cloud or enterprise engineer", "AI-102, Databricks, AWS or NVIDIA — match your platform", "A project-based program for build depth", "The credential should match the stack you are paid to run."],
+            ["Employer-funded", "Purdue/Simplilearn or upGrad/IIIT-B", "A vendor exam on top", "Buy the credential your L&D team already recognises."],
+            ["An Indian learner watching budget", "IBM or DeepLearning.AI (₹0 audit)", "LogicMojo on EMI once you’re certain", "Prove you’ll do the hours before committing rupees."],
+            ["A certificate collector with no portfolio", "Stop enrolling", "One project-graded program", "Your gap is demonstrable output, not more badges."],
           ]}
+          caption="Pairs, not winners: the first column is your situation, the middle two are the two gates you must clear."
         />
-      </Section>
 
-      {/* Honorable mentions */}
-      <Section id="honorable">
-        <H2>Honorable Mentions</H2>
-        <Bullets
-          items={[
-            <><strong>Hugging Face LLM, Agents and MCP courses (free)</strong> — outstanding technical learning and among the fastest-updated material anywhere; weak as a standalone credential.</>,
-            <><strong>Vanderbilt Prompt Engineering Specialization (Coursera)</strong> — well-taught, but Layer 2 only; do not treat it as a GenAI engineering credential.</>,
-            <><strong>Google Cloud Professional Machine Learning Engineer</strong> — a serious exam, more classical ML than GenAI; excellent for GCP-based ML engineers.</>,
-            <><strong>Microsoft AI-900 (Azure AI Fundamentals)</strong> — a cheap, honest literacy badge and a sensible stepping stone to AI-102.</>,
-            <><strong>Oracle Cloud Infrastructure Generative AI Professional</strong> — often free to certify; valuable mainly inside Oracle shops.</>,
-            <><strong>UT Austin × Great Learning AI/ML program</strong> — strong academic branding, GenAI depth lighter than the fee suggests.</>,
-            <><strong>Kaggle and Google Skills Boost GenAI badges</strong> — good weekend supplements, zero standalone hiring signal.</>,
-            <><strong>LangChain Academy (free)</strong> — the best focused route to LangGraph competence for anyone already coding.</>,
-          ]}
-        />
-      </Section>
-
-      {/* Career scope */}
-      <Section id="career-scope">
-        <H2>GenAI Career Scope in 2026 — Roles, Skills and Salary Bands</H2>
+        <H3>Not sure? Answer seven questions</H3>
         <P>
-          GenAI hiring has split into distinct roles with distinct evidence requirements. Salary ranges
-          below are directional for the Indian market and vary sharply by city, company type (GCC, IT
-          services, product, AI-native startup) and prior experience [VERIFY against current market
-          data before publishing].
+          This is the same logic I use when someone messages me with “which one should I take?”. It
+          outputs one certification and one reason — no email, no score, no upsell.
+        </P>
+        <DecisionQuiz />
+
+        <H3>The 12-question pre-enrollment checklist</H3>
+        <P>
+          Screenshot this and work through it on the sales call or the exam page. If a provider cannot
+          answer these in writing, that answer is itself the information you needed.
+        </P>
+        <Checklist
+          title="Ask all twelve before you pay anything"
+          items={[
+            "What exactly must I pass, submit or build to earn this credential?",
+            "Who issues it, and can an employer verify it independently?",
+            "Does it expire, and what does renewal cost in money and time?",
+            "Which of the seven layers are hands-on, which are theory, and which are absent?",
+            "When were the content and exam guide last updated?",
+            "Is any class genuinely live, and may I observe one before paying?",
+            "Does a human review my code, and how many times?",
+            "Is anything deployed and evaluated, or does it end in a notebook?",
+            "What is the refund policy, in writing, with the window stated?",
+            "Is the EMI a bank loan that continues if I stop attending?",
+            "What does “placement assistance” include, item by item?",
+            "Can I speak to two recent alumni you did not hand-pick?",
+          ]}
+        />
+      </Section>
+
+      {/* SECTION 10 — Career scope */}
+      <Section id="career-scope">
+        <H2>GenAI Career Scope in 2026 — Roles, Salary Bands and Certification Mapping</H2>
+        <P>
+          Direct answer: GenAI hiring has split into about ten distinct roles, each with a different
+          evidence bar — and certifications map onto them unevenly. Before the table, one caution I
+          will not soften: <strong>compensation figures vary enormously</strong> by country, city,
+          company type and prior experience. Everything below is an indicative range marked [VERIFY:
+          current market data] and must be checked against live listings before publication.
         </P>
         <DataTable
-          headers={["Role", "Core evidence expected", "Certification that helps", "Indicative India range"]}
+          headers={["Role", "Core skills", "Entry bar", "Range (₹ LPA / $)", "Best-fit certifications"]}
           rows={[
-            ["GenAI / LLM Application Engineer", "Deployed RAG app, orchestration code, evaluation harness", "Project-based program + one vendor exam", "₹12–35 LPA [VERIFY]"],
-            ["AI Agent Engineer", "Multi-step agents, tool use, MCP integrations, cost control", "Project-based program with agent frameworks", "₹15–40 LPA [VERIFY]"],
-            ["Applied ML / Fine-tuning Engineer", "LoRA/QLoRA runs benchmarked against base, dataset work", "NVIDIA NCA-GENL + hands-on fine-tuning program", "₹15–45 LPA [VERIFY]"],
-            ["LLMOps / Platform Engineer", "Serving, observability, prompt versioning, cost dashboards", "AI-102 or Databricks + LLMOps modules", "₹18–45 LPA [VERIFY]"],
-            ["Data / RAG Engineer", "Chunking strategy, hybrid search, retrieval evaluation", "Databricks GenAI Engineer Associate", "₹12–30 LPA [VERIFY]"],
-            ["AI Product Manager", "Use-case scoping, evaluation criteria, governance judgement", "Google Cloud GenAI Leader", "₹18–45 LPA [VERIFY]"],
-            ["GenAI Consultant / Solution Architect", "Architecture trade-offs across clouds, cost modelling", "Vendor exams + system design practice", "₹20–50 LPA [VERIFY]"],
-            ["Prompt / Conversation Designer", "Evaluated prompt systems, structured outputs, guardrails", "Prompt engineering certificate as a supplement only", "₹8–20 LPA [VERIFY]"],
+            ["GenAI Engineer / LLM Engineer", "LLM APIs, RAG, LangChain/LangGraph, evaluation, deployment", "Portfolio-driven; 1+ yr helps", "[VERIFY]", "LogicMojo, Databricks, IBM"],
+            ["AI Application Developer", "Prompting, function calling, orchestration, product integration", "Developers with GenAI projects", "[VERIFY]", "LogicMojo, AI-102"],
+            ["AI Agent Developer", "Agents, frameworks, MCP, tool integration, agent evaluation", "Portfolio-driven; fastest-growing", "[VERIFY]", "LogicMojo"],
+            ["RAG / Search Engineer", "Embeddings, vector search, chunking, re-ranking, evaluation", "Data or backend background", "[VERIFY]", "Databricks, LogicMojo"],
+            ["ML Engineer (GenAI-adjacent)", "ML, fine-tuning, PEFT, MLOps", "2+ yrs typical", "[VERIFY]", "NVIDIA, DL.AI × AWS, LogicMojo"],
+            ["Azure / Cloud AI Engineer", "Cloud AI services, RAG on cloud, deployment", "Cloud background", "[VERIFY]", "AI-102, AWS AIF, Google Cloud"],
+            ["LLMOps / AI Platform Engineer", "Serving, observability, cost, evaluation pipelines", "DevOps/MLOps background", "[VERIFY]", "LogicMojo, Databricks"],
+            ["AI Product Manager", "GenAI literacy, evaluation thinking, product craft", "PM background", "[VERIFY]", "Google Cloud GenAI Leader, AWS AIF"],
+            ["AI Consultant / Solutions Architect", "Breadth, architecture, communication", "Consulting/domain background", "[VERIFY]", "AI-102, Purdue/Simplilearn, upGrad"],
+            ["Prompt Engineer (declining as a standalone title)", "Prompt design, evaluation", "Portfolio-driven", "[VERIFY]", "Any; not a destination"],
+          ]}
+          caption="Indicative only. Titles are applied inconsistently across employers — read the responsibilities, not the label."
+        />
+
+        <H3>Where GenAI hiring actually happens in 2026</H3>
+        <P>
+          Six pockets absorb most of the demand: global capability centres building GenAI teams in
+          Bengaluru, Hyderabad, Pune, NCR and Chennai; product companies shipping LLM features into
+          existing software; IT-services GenAI practices delivering RAG and agent projects for clients;
+          AI-native startups; enterprise adoption programmes in BFSI, healthcare, retail and
+          manufacturing; and globally distributed remote roles.
+        </P>
+        <P>
+          The honest counterpoint: entry-level GenAI hiring is competitive, portfolios weigh more than
+          certificates at every stage after the screen, and the title “GenAI engineer” covers work
+          ranging from prompt plumbing to distributed inference. Read the job description, not the
+          headline.
+        </P>
+
+        <H3>What GenAI interviewers actually ask</H3>
+        <P>
+          These are the question shapes that recur. If your chosen credential does not prepare you to
+          answer them with reference to something you built, it is not preparing you for the interview.
+        </P>
+        <Numbered
+          items={[
+            "When would you fine-tune instead of using RAG — and what would change your mind?",
+            "Design a RAG system for 50,000 internal documents with mixed formats.",
+            "How do you choose chunk size, and how do you evaluate retrieval quality?",
+            "Walk me through hybrid search and re-ranking. When is re-ranking not worth the latency?",
+            "How do you detect and reduce hallucination in a production answer path?",
+            "How do you evaluate an LLM feature without a labelled dataset?",
+            "Explain LoRA to a non-technical stakeholder in four sentences.",
+            "How would you make this agent safe against prompt injection and tool misuse?",
+            "How would you serve this at 10,000 users and control cost per request?",
+            "What does your observability look like — what do you log, and what do you alert on?",
+            "How do you version prompts, and how do you roll one back?",
+            "Where does MCP fit in this architecture, and what does it replace?",
+            "How would you pick between an open-weight model and a frontier API here?",
+            "What did you get wrong in your project, and what did you change as a result?",
+            "Show me the evaluation numbers for your flagship project and explain what they hide.",
           ]}
         />
       </Section>
 
-      {/* Roadmap */}
+      {/* SECTION 11 — Roadmap */}
       <Section id="roadmap">
-        <H2>The Certification + Portfolio Roadmap (6 Months, 10 Hours a Week)</H2>
+        <H2>Your Certification + Portfolio Roadmap (6–9 Months, For People With Jobs)</H2>
+        <P>
+          Direct answer: at eight to ten hours a week, nine months takes a Python-comfortable
+          professional from zero GenAI to a defensible portfolio plus one recognised credential. Each
+          month has one focus, one deliverable and, where relevant, one credential milestone.
+        </P>
         <DataTable
-          headers={["Phase", "Weeks", "Learn", "Build", "Credential milestone"]}
+          headers={["Month", "Focus", "Deliverable", "Credential milestone"]}
           rows={[
-            ["Foundations", "1–4", "Python, pandas, APIs, Git, ML intuition", "A small data project on GitHub with a README", "None — resist the urge to buy a badge"],
-            ["LLM fundamentals", "5–7", "Tokens, context windows, sampling, model families, Ollama", "A model-comparison notebook with cost/latency notes", "Audit DeepLearning.AI × AWS"],
-            ["Prompting & structured output", "8–9", "Chain-of-thought, JSON mode, function calling, injection", "A prompt-evaluated tool with versioned prompts", "Optional literacy badge if HR needs one"],
-            ["RAG", "10–14", "Embeddings, vector DBs, chunking, hybrid search, re-ranking", "A production-shaped RAG app with citations and an eval set", "This is your flagship project"],
-            ["Orchestration & agents", "15–18", "LangChain, LangGraph, CrewAI, Agents SDK, MCP", "An agent with tools, memory and a cost ceiling", "Project-graded program checkpoint"],
-            ["Fine-tuning", "19–21", "SFT, LoRA/QLoRA, dataset quality, DPO concepts", "A fine-tuned open-weight model benchmarked vs base", "Consider NVIDIA NCA-GENL"],
-            ["Evaluation & LLMOps", "22–24", "LLM-as-judge, guardrails, FastAPI, Docker, observability", "Deploy the RAG app with monitoring and caching", "Capstone submission + vendor exam booking"],
-            ["Interview conversion", "25–26", "System design cases, project defence, resume positioning", "A portfolio README index and a 5-minute demo per project", "Sit the vendor exam; publish the credential"],
+            ["M1", "Python for AI, APIs, Git", "First LLM app with structured outputs on GitHub", "None — resist buying anything yet"],
+            ["M2", "ML essentials, transformers intuition", "Written explanation of attention + an evaluated classifier", "None"],
+            ["M3", "Prompt engineering and evaluation", "A prompt evaluation harness with versioned prompts", "Sit AWS AI Practitioner or Google Cloud GenAI Leader if a fast badge helps"],
+            ["M4", "Embeddings, vector DBs, RAG", "RAG app with citations and an evaluation set", "This becomes your flagship project"],
+            ["M5", "LangChain / LangGraph orchestration", "Multi-step application with real state management", "Project-graded program checkpoint"],
+            ["M6", "Fine-tuning (LoRA / QLoRA)", "Fine-tuned model benchmarked against base", "Consider NVIDIA NCA-GENL"],
+            ["M7", "Agents, frameworks, MCP", "Tool-using agent that survives adversarial inputs", "None — build, don’t buy"],
+            ["M8", "Evaluation, guardrails, deployment", "Deployed service with monitoring and cost caps", "Sit AI-102 or Databricks if platform-relevant"],
+            ["M9", "Capstone, portfolio polish, interview practice", "Portfolio index + a five-minute demo per project", "Certification earned through reviewed projects; applications started"],
           ]}
+          caption="Eight to ten hours a week. Slower is fine; skipping M4 and M8 is not."
         />
-        <Callout label="The pairing rule">
-          One recognised credential (vendor exam) + one project-backed certification + 6–10 documented
-          projects. That combination answers both the HR screen and the technical round. Either half
-          alone stalls at one of those two gates.
+        <Callout label="What you’re actually buying">
+          A good certification course compresses this to four to six months by removing the search
+          cost — deciding what to learn next is where most self-taught learners lose their months. An
+          exam alone compresses nothing; it only marks the end.
         </Callout>
       </Section>
 
-      {/* Employer value */}
+      {/* SECTION 12 — Employer value */}
       <Section id="employer-value">
-        <H2>How Employers Actually Read GenAI Certificates</H2>
+        <H2>Do Employers Actually Value GenAI Certifications? An Honest Answer</H2>
+        <P>
+          Direct answer: <strong>yes, conditionally</strong> — as a screening signal, as an
+          internal-mobility signal, and as proof of platform competence. <strong>No</strong>, as a
+          substitute for demonstrated building. Both halves of that sentence are true at the same
+          time, which is why the debate never resolves.
+        </P>
+        <P>
+          The reason is that three different people read your credential, and they are reading for
+          three different things.
+        </P>
         <DataTable
           headers={["Who reads it", "What they look for", "What impresses", "What gets ignored"]}
           rows={[
-            ["HR / recruitment screen", "Recognisable issuer names, keyword match", "Microsoft, Google, AWS, IBM, Purdue, IIIT-B tags", "Unknown providers, workshop certificates, prompt-only badges"],
-            ["Hiring manager", "Evidence you can ship", "GitHub with deployed projects and READMEs", "Any certificate with no linked artefact"],
-            ["Technical interviewer", "Depth under follow-up questions", "You explain chunking, re-ranking and eval trade-offs", "Certificate names; memorised definitions"],
+            ["Recruiter / ATS screen", "Keyword match and a brand they recognise", "Microsoft, Google, AWS, NVIDIA, Databricks, IBM, Purdue, IIIT-B", "Unknown providers, workshop certificates, prompt-only badges"],
+            ["Hiring manager", "Does this predict capability?", "A deployed project with an evaluation set and a clear README", "Any certificate with no linked artefact"],
+            ["Technical interviewer", "Can you defend it under follow-up?", "Chunking, re-ranking and evaluation trade-offs explained from experience", "Certificate names and memorised definitions"],
             ["Internal promotion committee", "Formal, documented upskilling", "University-affiliated and vendor credentials", "Self-paced badges with no assessment"],
-            ["Startup founder / small team", "Can you build this alone next week?", "A working demo you deployed yourself", "Nearly everything else"],
+            ["AI-native startup founder", "Can you build this alone next week?", "A working demo you deployed yourself", "Nearly everything else"],
           ]}
         />
         <P>
-          The pattern is consistent: <strong>credentials get you read, portfolios get you hired, and
-          depth gets you the offer.</strong> Optimising only for the first stage is the single most
-          common and most expensive mistake in this category.
+          This maps cleanly onto the list. <strong>Vendor exams clear HR screens</strong> because they
+          are globally identical, verifiable and named in job descriptions.{" "}
+          <strong>Project-backed programs clear technical rounds</strong> because they leave behind
+          artefacts and the habit of defending design decisions. Neither instrument does the other’s
+          job, which is precisely why the combination outperforms either alone at a lower total cost
+          than most people expect.
         </P>
-      </Section>
-
-      {/* Red flags */}
-      <Section id="red-flags">
-        <H2>12 Red Flags in GenAI Certification Marketing</H2>
-        <Numbered
-          items={[
-            "“Industry-recognised” with no industry, employer or issuing body actually named.",
-            "A syllabus where prompt engineering is the largest module and RAG is a single session.",
-            "“No coding required” attached to an engineering-sounding certification title.",
-            "“Hands-on labs” that turn out to be click-through demos or copy-paste notebooks.",
-            "“Live classes” that are recorded replays with a chat window — ask for the batch calendar.",
-            "A 2022 ML curriculum with three LLM sessions bolted on and GenAI in the certificate name.",
-            "Placement percentages quoted against “eligible learners” with the eligibility rules hidden.",
-            "Average salary figures instead of medians, with no window or role breakdown.",
-            "Scarcity countdowns, “2 seats left”, and prices that reset every time you reload the page.",
-            "A university tag where the faculty teach zero sessions — check who delivers each module.",
-            "No mention of evaluation, guardrails, deployment or observability anywhere in the syllabus.",
-            "Refund and deferral policies that exist only in a sales call, never in writing.",
-          ]}
-        />
-      </Section>
-
-      {/* Decision tree */}
-      <Section id="decision-tree">
-        <H2>Decision Tree — Pick Your GenAI Certification in 60 Seconds</H2>
-        <pre className="reveal surface-card mt-6 overflow-x-auto bg-primary-soft/50 p-6 text-sm leading-relaxed text-foreground">
-{`Do you need to BUILD GenAI systems in your role?
-├─ No → Do you scope, buy or govern GenAI projects?
-│        ├─ Yes → Google Cloud Generative AI Leader (+ AWS AI Practitioner)
-│        └─ No  → AWS AI Practitioner or Microsoft AI-900 (literacy)
-└─ Yes → Can you already code in Python?
-         ├─ No  → Program with Python + ML foundations included → LogicMojo
-         └─ Yes → Does your employer / target JD name a cloud vendor cert?
-                  ├─ Yes → Take that exam (AI-102 / Databricks / NVIDIA)
-                  │         AND pair it with a project-backed program
-                  └─ No  → Is your budget effectively ₹0?
-                           ├─ Yes → DeepLearning.AI × AWS, then IBM,
-                           │         then Hugging Face agents + MCP
-                           └─ No  → Do you need interview prep and
-                                    placement support?
-                                    ├─ Yes → LogicMojo Generative AI Course
-                                    └─ No  → Do you need a university tag
-                                             for HR or promotion?
-                                             ├─ Yes → Purdue/Simplilearn
-                                             │         or upGrad/IIIT-B
-                                             └─ No  → LogicMojo or
-                                                       self-directed + vendor exam`}
-        </pre>
-      </Section>
-
-      {/* Free vs paid */}
-      <Section id="free-vs-paid">
-        <H2>Free vs Paid GenAI Certifications — An Honest Comparison</H2>
-        <DataTable
-          headers={["Dimension", "Free tracks", "Paid programs", "Verdict"]}
-          rows={[
-            ["Learning quality", "Can be excellent (Hugging Face, DeepLearning.AI)", "Varies wildly with price", "Price does not predict teaching quality"],
-            ["Structure and accountability", "None — you supply the discipline", "Deadlines, cohorts, mentors", "The main thing you actually pay for"],
-            ["Human feedback on code", "None", "Only in project-graded programs", "Ask explicitly; many paid programs auto-grade too"],
-            ["Credential weight", "Low", "Moderate to high depending on issuer", "Vendor exams give the most recognition per rupee"],
-            ["Career and interview support", "None", "Real only in a few programs", "Verify scope in writing before paying"],
-            ["Completion rate", "Very low in practice", "Higher with live cohorts", "A finished free course beats an abandoned ₹2L one"],
-            ["Total realistic cost", "₹0–₹5K (API and cloud credits)", "₹8K vendor exam to ₹3L program", "Budget ₹3–8K for API/cloud credits regardless"],
-          ]}
-        />
+        <P>
+          The counterpoint deserves equal weight: in AI-native startups and at senior levels,
+          certifications are frequently ignored outright in favour of GitHub, shipped products and
+          references. If that is your target, spend on capability and skip the badge without guilt.
+        </P>
         <Callout>
-          My honest advice for a tight budget: spend ₹0 for four weeks on DeepLearning.AI and Hugging
-          Face first. If you complete them without being chased, you may not need a paid program at all
-          — just a vendor exam and a strong portfolio. If you stall by week two, you are buying
-          structure, and that is a legitimate purchase.
+          A GenAI certification opens the door. What you built while earning it walks through.
         </Callout>
       </Section>
 
-      {/* ROI */}
-      <Section id="roi">
-        <H2>ROI Analysis — Is a GenAI Certification Worth It in 2026?</H2>
+      {/* SECTION 13 — Red flags */}
+      <Section id="red-flags">
+        <H2>Red Flags — Spotting a Bad GenAI Certification Before You Pay</H2>
         <P>
-          ROI here is not the certificate; it is the salary or role change that follows the capability
-          the certificate documents. Below are directional scenarios, not promises — outcomes depend
-          entirely on your prior experience, market and portfolio [VERIFY salary assumptions].
+          Direct answer: fifteen signals, any three of which together should stop the purchase. None
+          of them require technical knowledge to check — which is deliberate, because the whole problem
+          with this category is that you cannot evaluate a GenAI syllabus before you know GenAI.
+        </P>
+        <Numbered
+          items={[
+            "A “GenAI certification” whose syllabus is ChatGPT usage and prompt templates.",
+            "A credential you can earn without submitting code or passing a proctored exam — sold at engineering-certification prices.",
+            "“Industry-recognised” with no employer, issuing body or verifiable badge named anywhere.",
+            "No last-updated date on the curriculum. In GenAI, undated means outdated.",
+            "A 2026 syllabus with no RAG evaluation, no fine-tuning, no agents and no deployment.",
+            "“Live” classes that turn out to be recordings with a chat window — ask for the batch calendar.",
+            "Guaranteed job or guaranteed salary claims of any kind.",
+            "Placement statistics with no denominator: percentages of “eligible” learners, eligibility undefined.",
+            "“10+ projects” with no project descriptions, no repos and no deployment requirement.",
+            "University or IIT branding with no clarity on who actually teaches each module.",
+            "Manufactured scarcity — “price goes up tonight”, “two seats left”, a countdown that resets.",
+            "No refund policy, or a refund window that closes before the first module ends.",
+            "EMI arranged through a lender whose terms you cannot read before signing.",
+            "Exam vouchers pushed at you before you have even seen the exam guide.",
+            "No mechanism at all for a human to give feedback on work you produce.",
+          ]}
+        />
+        <Callout label="On sales calls">
+          Get everything in writing, never pay on the same call, and treat urgency as information about
+          the seller rather than about the offer. A program worth ₹1L is still worth ₹1L tomorrow
+          morning.
+        </Callout>
+      </Section>
+
+      {/* SECTION 14 — Free vs paid */}
+      <Section id="free-vs-paid">
+        <H2>Free vs Paid GenAI Certifications — When Free Is Genuinely Enough</H2>
+        <P>
+          Direct answer: if you are self-directed, already code, and have time rather than money, the
+          2026 free stack plus one vendor exam is not a compromise — it is the rational choice. Here is
+          the stack, in order.
         </P>
         <DataTable
-          headers={["Scenario", "Investment", "Time to capability", "Plausible outcome", "Break-even"]}
+          headers={["Step", "Resource", "Cost", "What it gives you"]}
           rows={[
-            ["Vendor exam only, no portfolio", "₹8–20K + 6 weeks", "Low (Level 1–2)", "Passes HR screens; often stalls in technical rounds", "Only if your employer rewards the badge internally"],
-            ["Free MOOC track, self-directed, strong portfolio", "₹0–5K + 4–6 months", "Moderate–High (Level 3)", "Realistic entry for disciplined developers", "Immediate — near-zero cost"],
-            ["Project-based program (₹40K–₹1.5L)", "₹40K–₹1.5L + 5–6 months", "High (Level 4)", "Role change or internal GenAI move for committed learners", "Typically 2–6 months of the delta [VERIFY]"],
-            ["University-tagged program (₹1–2.5L)", "₹1–2.5L + 4–8 months", "Moderate (Level 2–3)", "Strong for promotions, HR filters, employer-funded upskilling", "Fast if the employer pays; slow if self-funded"],
-            ["Badge collecting (5+ certificates, no builds)", "₹20K–₹1L + months", "Low", "No measurable hiring change", "Never"],
+            ["1", "DeepLearning.AI × AWS — Generative AI with LLMs (audit)", "₹0", "LLM internals, fine-tuning and RLHF theory"],
+            ["2", "Hugging Face LLM, Agents and MCP courses", "₹0", "Current, practitioner-grade agent and tooling practice"],
+            ["3", "Kaggle notebooks and datasets", "₹0", "Practice reps and public evidence of your work"],
+            ["4", "Official LangChain / LangGraph documentation and tutorials", "₹0", "Orchestration patterns straight from the source"],
+            ["5", "Google Cloud Skills Boost + AWS Skill Builder free paths", "₹0", "Cloud GenAI service literacy and exam alignment"],
+            ["6", "IBM GenAI Engineering Professional Certificate (audit)", "₹0", "A structured applied spine to follow for free"],
+            ["7", "One vendor exam (AWS AIF, Google Cloud GenAI Leader or AI-102)", "₹8K–₹15K [VERIFY]", "The recognised badge that clears the HR screen"],
+            ["8", "API and cloud credits for your own projects", "₹3K–₹8K", "The portfolio nothing free can hand you"],
           ]}
+          caption="Total realistic outlay: roughly ₹11,000–₹23,000 [VERIFY], versus ₹1L+ for a premium program."
         />
-        <P>
-          The pattern across all five: <strong>ROI tracks demonstrated capability, not spend.</strong>{" "}
-          The worst ROI in this category is not the expensive program — it is the cheap badge that
-          replaced building something.
-        </P>
-      </Section>
-
-      {/* FAQs */}
-      <Section id="faqs">
-        <H2>GenAI Certification FAQs (35+ Answers)</H2>
-        <Faq
+        <H3>What free genuinely cannot give you</H3>
+        <Bullets
           items={[
-            { q: "Which is the best GenAI certification in 2026?", a: "By this article's criteria — capability per rupee and per hour, proven through projects — LogicMojo's Generative AI Course ranks first for job-focused learners, developers and career switchers. For a globally recognised vendor credential, Microsoft AI-102 is the strongest engineering exam, and Google Cloud Generative AI Leader is the best leadership credential." },
-            { q: "Are generative AI certifications worth it?", a: "Yes, conditionally. A certification is worth it when it either teaches you the stack hands-on or carries a credential name that employers screen for — ideally both. It is not worth it when it replaces building something you can demonstrate and defend." },
-            { q: "Do employers value GenAI certificates?", a: "Recruiters and HR systems value recognisable issuers (Microsoft, Google, AWS, IBM, NVIDIA, Databricks, universities). Hiring managers and technical interviewers value evidence — deployed projects, evaluation results, design trade-offs. Both stages exist, so optimise for both." },
-            { q: "Certification or portfolio — which matters more?", a: "The portfolio decides the offer; the certification often decides whether anyone reads your profile. If you must choose one, choose the portfolio. The strongest 2026 profile has both." },
-            { q: "Vendor certification vs course certificate — which is better?", a: "They do different jobs. A vendor exam certification proves you passed an assessed, proctored test and travels globally. A project-based course certification proves a human reviewed work you built. Pair them rather than ranking them." },
-            { q: "Which GenAI certification is best for complete beginners?", a: "A program that includes Python and ML foundations — LogicMojo — or, if you only want a recognised badge first, AWS AI Practitioner or Microsoft AI-900. Do not buy an engineer-level exam voucher as your first purchase." },
-            { q: "Which is best for working professionals in non-AI tech roles?", a: "An evening/weekend live cohort you can finish alongside work, plus your employer's cloud vendor exam. The vendor credential speaks internally; the project program builds the capability." },
-            { q: "Which is best for developers who already know Python?", a: "Start with DeepLearning.AI × AWS for LLM foundations, then a full-stack program for RAG, LangGraph, fine-tuning, agents, MCP and LLMOps. Add AI-102, NVIDIA NCA-GENL or Databricks depending on your platform." },
-            { q: "Do I need Python for a GenAI certification?", a: "For any engineering credential, yes. Leader- and practitioner-level vendor exams genuinely require none — but they also do not signal engineering capability, and mistaking one for the other is the most common error in this category." },
-            { q: "Do I need machine learning before GenAI?", a: "You need ML intuition, not a full ML career: train/test splits, overfitting, evaluation metrics, and how attention works conceptually. Interviewers ask these constantly, and 'GenAI-only' courses that skip them leave learners unable to debug their own pipelines." },
-            { q: "How much does a GenAI certification cost?", a: "₹0 for free credentialed tracks; ₹8K–₹25K ($99–$300) per attempt for vendor exams; ₹40K–₹1.5L for project-based programs; ₹1L–₹3.5L for university-affiliated certificates. Budget ₹3–8K extra for API and cloud credits [VERIFY current prices]." },
-            { q: "How long does a GenAI certification take?", a: "3–4 weeks for a focused MOOC, 4–10 weeks of preparation for a vendor exam, and 4–8 months for a project-based or university program at 10–15 hours a week." },
-            { q: "Do GenAI certifications expire?", a: "Most vendor certifications do: roughly annual renewal for Microsoft role-based certs, about 3 years for AWS and Google Cloud, about 2 years for NVIDIA and Databricks [VERIFY current policies]. MOOC certificates and project-based course certifications generally do not expire." },
-            { q: "Can a certification alone get me a GenAI job?", a: "Rarely. Certifications open screens; deployed projects and the ability to defend design decisions convert interviews. Treat the certificate as a door, not a destination." },
-            { q: "Which certification covers RAG, LangChain and AI agents together?", a: "Very few. Among vendor exams, Databricks is the most RAG-centric; among low-cost tracks, IBM's covers RAG and LangChain but is light on agents. Full coverage including LangGraph, MCP, evaluation and LLMOps typically requires a project-based program." },
-            { q: "Is the Google Cloud Generative AI Leader certification worth it?", a: "For managers, PMs, consultants and business leaders, yes — it is cheap, fast, brand-recognised and honestly scoped. For anyone targeting an engineering role, no: it is not designed to survive a technical round." },
-            { q: "Is Microsoft AI-102 worth it?", a: "If you work in or target an Azure environment, it is the strongest vendor engineering signal on this list. Pair it with a portfolio, because the exam itself produces no projects." },
-            { q: "Is the AWS AI Practitioner certification worth it?", a: "As an accessible, recognised first credential for AWS-centric organisations and non-engineers, yes. As proof of GenAI engineering capability, no — it is foundational by design." },
-            { q: "Is NVIDIA NCA-GENL worth it?", a: "For ML practitioners and technically inclined learners, it is the most demanding associate-level GenAI exam here and a credible depth signal. It includes no projects, so it needs a portfolio alongside it." },
-            { q: "Is the Databricks Generative AI Engineer certification worth it?", a: "Very much so inside Databricks shops and for data-platform GenAI roles, because it tests retrieval design seriously. Less portable if you don't use the platform." },
-            { q: "GenAI certification vs AI/ML certification — which should I take?", a: "If your target role builds LLM applications, agents or RAG systems, take the GenAI credential. If you're targeting classical ML, forecasting or recommendation systems, take an ML certification. GenAI-only paths without ML intuition leave a gap interviewers find quickly." },
-            { q: "Are free GenAI certifications credible?", a: "As learning, some are excellent — Hugging Face and DeepLearning.AI are genuinely first-rate. As credentials they carry little weight, so use them to build capability, then pay only for the credential or the structure you actually need." },
-            { q: "Can I get a GenAI certification without coding?", a: "Yes — Google Cloud Generative AI Leader, AWS AI Practitioner and Microsoft AI-900. Understand what you're buying: literacy credentials, appropriate for business roles, not engineering evidence." },
-            { q: "How many projects do I need in a GenAI portfolio?", a: "Six to ten documented projects, with one flagship deployed RAG application, one agent with tools and memory, one fine-tuning experiment benchmarked against base, and an evaluation harness for at least one of them." },
-            { q: "What is the single most-asked GenAI interview topic?", a: "Retrieval-augmented generation in production: chunking strategy, hybrid search, re-ranking, citation handling, and how you evaluated faithfulness and relevance. One demo notebook will not survive it." },
-            { q: "What is MCP and do I need to know it?", a: "The Model Context Protocol is a standard way for models to connect to tools and data sources. It's an emerging 2026 expectation for agent work and is still absent from almost every certification syllabus — which makes it a cheap differentiator." },
-            { q: "Should I learn fine-tuning or is RAG enough?", a: "RAG solves most knowledge problems and should be your default. Learn fine-tuning anyway: interviewers ask when and why you'd choose it, and a LoRA/QLoRA run benchmarked against the base model is strong portfolio evidence." },
-            { q: "Do I need a GPU to complete these certifications?", a: "No. Colab, free tiers and quantised open-weight models via Ollama cover almost everything. Budget a small amount for API credits and short GPU rentals for fine-tuning runs." },
-            { q: "Is prompt engineering certification still worth anything?", a: "As a standalone credential in 2026, very little — prompting is baseline literacy. As one module inside a broader engineering program, it remains essential, particularly structured outputs, function calling and prompt evaluation." },
-            { q: "How do I verify a “placement assistance” claim?", a: "Ask five questions in writing: percentage of enrolled (not eligible) learners placed, the time window, the median salary, whether roles were GenAI-specific, and whether you can speak to two recent alumni the provider did not select as testimonials." },
-            { q: "Are university-affiliated GenAI programs worth ₹1–2.5L?", a: "They're worth it when an employer pays, when you need the tag for a promotion or HR filter, or when structure is your bottleneck. Self-funded and optimising for capability, you'll usually get more depth per rupee elsewhere." },
-            { q: "What if my employer will only fund one certification?", a: "Take the vendor exam matching your organisation's platform — it's the easiest internal justification — and build the portfolio in parallel using free tracks. That combination costs your employer least and you most in hours, but it works." },
-            { q: "Do GenAI certifications help with international jobs?", a: "Vendor certifications travel best because they're identical worldwide and verifiable via Credly. Indian university tags are less portable, and project-based credentials travel through the GitHub portfolio they produce rather than the name." },
-            { q: "I have six badges and no interviews. What now?", a: "Stop enrolling. Pick one domain, build a deployed RAG application with an evaluation set, write the README as if a stranger will run it, then rehearse defending every design choice. Badges don't convert; artefacts do." },
-            { q: "How do I avoid another “GenAI masterclass” disappointment?", a: "Run the seven-layer audit on the syllabus before paying: mark each layer hands-on, theory or absent. If RAG is one notebook, fine-tuning is missing and deployment is a slide, walk away regardless of the brand." },
-            { q: "Can I do two certifications at once?", a: "One project-based program plus vendor-exam preparation is manageable at 12–15 hours a week, because the exam reinforces the program's concepts. Two project programs simultaneously means finishing neither." },
-            { q: "What should I do first, this week?", a: "Audit one syllabus with the seven-layer test, start the free DeepLearning.AI × AWS course to check your appetite, and create a GitHub repository for your first GenAI project. Buy nothing for two weeks." },
+            "Accountability and completion pressure — the single biggest predictor of outcome.",
+            "Human code review that catches bad chunking, leaking evaluation sets and unsafe agents.",
+            "A curated sequence that saves you months of deciding what to learn next.",
+            "Doubt resolution at 11pm on a retrieval bug you cannot name.",
+            "Portfolio design and interview defence practice.",
+            "A peer cohort whose pace pulls you forward when motivation dips.",
+            "Placement assistance, referrals and structured application support.",
           ]}
         />
+        <Callout>
+          Paid GenAI programs in 2026 do not sell information — information is free and abundant. They
+          sell structure, feedback, sequence, assessment and accountability. If you can supply those
+          yourself, free plus one vendor exam wins. If you have started and stopped before, the
+          structure <em>is</em> the product, and paying for it is a rational purchase rather than a
+          failure of discipline.
+        </Callout>
       </Section>
 
-      {/* Verdict */}
-      <Section id="verdict">
-        <H2>Final Verdict — The Certification That Survives the Interview</H2>
+      {/* SECTION 15 — ROI */}
+      <Section id="roi">
+        <H2>ROI Reality — Is a GenAI Certification Worth It?</H2>
         <P>
-          After working through 80+ credentials, the conclusion is uncomfortable for a category built on
-          badges: <strong>the certificate is the smallest part of what you are buying.</strong> What you
-          are actually buying is seven layers of capability, a human who reviews your code, and enough
-          structure to finish. The name on the PDF only decides whether anyone reads your profile.
+          Direct answer: it depends on three variables, and the certificate is not one of them. Use
+          this formula rather than a testimonial:
+        </P>
+        <div className="reveal surface-card mt-6 bg-primary-soft/50 p-6 text-center">
+          <p className="text-base font-semibold leading-relaxed text-foreground">
+            ROI = (realistic salary or opportunity delta over 24 months × probability of achieving it)
+            − (fee + exam and renewal costs + EMI interest + opportunity cost of your hours)
+          </p>
+        </div>
+        <P>
+          The second bracket is knowable today. The first is a probability, and most marketing quietly
+          sets it to 1.0. Three worked scenarios, all figures marked [VERIFY / ILLUSTRATIVE]:
+        </P>
+        <DataTable
+          headers={["Scenario", "Investment", "What happens", "ROI reality"]}
+          rows={[
+            ["A — Developer, 4 yrs experience", "₹XX,XXX project-based program + one ₹12K vendor exam [VERIFY]", "Completes, builds 10+ projects, deploys a capstone, moves into a GenAI engineer role", "Payback modelled in months rather than years — but entirely conditional on completion, portfolio quality and application effort"],
+            ["B — Non-tech career switcher", "₹2L university-branded program [VERIFY]", "Completes, enters an entry-level GenAI-adjacent role; the credential helps clear HR screening", "Longer payback, higher variance. This path is slower than marketing suggests, and honest planning should assume that"],
+            ["C — The abandoned purchase", "₹2L program stopped at month three, or two exam vouchers never sat", "No credential, no portfolio, EMI continues", "Strongly negative. This is the most common outcome in the category and almost nobody models it before buying"],
+          ]}
+          caption="Illustrative structures, not promises. Scenario C is included because it is the realistic downside, not a rhetorical device."
+        />
+        <H3>The three factors that actually determine ROI</H3>
+        <Numbered
+          items={[
+            "Completion. An abandoned ₹2L program returns nothing; a finished free course returns real capability.",
+            "Portfolio quality. Six to ten documented, deployed, evaluated projects — not ten notebooks that follow the same tutorial.",
+            "Application effort in the three months after. Certifications do not get jobs; applications, referrals and interviews do.",
+          ]}
+        />
+        <Callout>
+          The certification is roughly 40% of your outcome. What you build while earning it, and what
+          you do in the three months after, is the other 60%.
+        </Callout>
+      </Section>
+
+      {/* SECTION 16 — Author */}
+      <Section id="author">
+        <H2>About the Author</H2>
+        <AuthorBio />
+      </Section>
+
+      {/* SECTION 17 — Expert reviewers */}
+      <Section id="reviewers">
+        <H2>Expert Reviewers</H2>
+        <P>
+          Five practitioners reviewed different parts of this analysis: the curriculum depth scorecard,
+          the credibility scorecard and interview expectations, the delivery and placement sections,
+          the learner-type recommendations and ROI model, and the seven-layer skill stack. Names,
+          quotes and photographs remain marked [INSERT] until each reviewer is confirmed — inventing
+          them would undermine the exact thing this article argues for.
+        </P>
+        <ReviewerCarousel reviewers={reviewers} />
+        <p className="mt-4 rounded-lg border border-border bg-muted/60 px-4 py-3 text-sm italic leading-relaxed text-muted-foreground">
+          Reviewer disclosure [CONFIRM BEFORE PUBLISHING]: reviewers assessed the evaluation framework
+          and factual accuracy and were not compensated for endorsements. If any reviewer is
+          compensated or affiliated with a program on this list, that relationship must be disclosed
+          here instead.
+        </p>
+      </Section>
+
+      {/* SECTION 18 — FAQs */}
+      <Section id="faqs">
+        <H2>Frequently Asked Questions</H2>
+        <P>
+          Thirty-six questions, grouped, each answered directly in the first sentence. These are the
+          questions I am actually asked — including the uncomfortable ones about EMI, placement claims
+          and whether any of this is worth it.
+        </P>
+        {faqClusters.map((c) => (
+          <div key={c.title}>
+            <H3>{c.title}</H3>
+            <Faq items={c.items} />
+          </div>
+        ))}
+      </Section>
+
+      {/* SECTION 19 — Final verdict */}
+      <Section id="verdict">
+        <H2>Final Verdict — The Best GenAI Certification Course in 2026</H2>
+        <P>
+          Three credentials lead this list for three different reasons.{" "}
+          <strong>LogicMojo’s Generative AI Course</strong> has the highest capability ceiling and the
+          clearest answer to “what will I be able to build and defend?” for a learner who can commit to
+          live structure. <strong>Microsoft AI-102</strong> is the most employer-recognised GenAI
+          engineering exam in enterprise India, and it costs less than a weekend workshop.{" "}
+          <strong>DeepLearning.AI × AWS</strong> remains the best explanation of how LLMs actually work
+          at a price close to zero.
         </P>
         <P>
-          If you need capability plus conversion support, LogicMojo’s Generative AI Course is the
-          strongest fit on these criteria. If you need a globally recognised name, take your platform’s
-          vendor exam — AI-102, AWS, Google Cloud, NVIDIA or Databricks. If you need to spend nothing,
-          DeepLearning.AI and IBM will take a disciplined developer surprisingly far. If you need an
-          academic tag for HR or a promotion, Purdue/Simplilearn or upGrad/IIIT-B earn their place.
+          Which is right for you depends on five things: your goal, your background, your budget, your
+          weekly hours, and which reader you need to convince — the recruiter, the hiring manager or
+          the technical interviewer. Those three readers want different evidence, and no single
+          credential satisfies all of them. That is why the recommendation across this entire article
+          is a pair: <strong>one recognised credential plus one project-backed program</strong>, with
+          completion and portfolio quality mattering far more than the badge on either.
+        </P>
+        <P>
+          One concrete next action, today: take the syllabus or exam guide you are closest to buying and
+          audit it against the seven-layer stack, marking each layer hands-on, theory or absent. Then
+          ask the twelve pre-enrollment questions in writing. Then block eight to ten hours a week in
+          your calendar <em>before</em> you pay for anything. If you cannot find the hours, no
+          certification on this list will fix that — and knowing it now saves you a five-figure lesson.
         </P>
         <Callout>
           Pick one recognised credential, one project-backed program, and build six to ten things you
-          can defend. That is the entire strategy. Everything else in this article is just detail on how
-          to execute it.
+          can defend. That is the entire strategy. Everything else in this article is detail on how to
+          execute it.
         </Callout>
-          <div className="reveal mt-10 overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-glow p-8 text-center shadow-[var(--shadow-glow)]">
-            <h3 className="text-2xl text-primary-foreground">
-              Ready to build a GenAI portfolio you can defend?
-            </h3>
-            <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-primary-foreground/85">
-              Live cohorts, 10–15 graded projects, agents, RAG, fine-tuning, LLMOps and GenAI
-              interview preparation.
-            </p>
-            <a
-              href="https://logicmojo.com"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-card px-6 py-3 text-sm font-semibold text-primary transition-transform duration-200 hover:-translate-y-0.5"
-            >
-              Explore the LogicMojo Generative AI Course →
-            </a>
-          </div>
-        </Section>
+        <div className="reveal mt-10 overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-glow p-8 text-center shadow-[var(--shadow-glow)]">
+          <h3 className="text-2xl text-primary-foreground">
+            Ready to build a GenAI portfolio you can defend?
+          </h3>
+          <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-primary-foreground/85">
+            Live IST cohorts, graded projects, agents, RAG, fine-tuning, LLMOps and GenAI interview
+            preparation — with honest limitations stated up front.
+          </p>
+          <a
+            href="https://logicmojo.com"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-card px-6 py-3 text-sm font-semibold text-primary transition-transform duration-200 hover:-translate-y-0.5"
+          >
+            Explore LogicMojo’s Generative AI Course — full curriculum, live batches &amp; project
+            portfolio →
+          </a>
+        </div>
+      </Section>
       </main>
+
+      <SiteFooter />
+      <StickyCta href="https://logicmojo.com" />
     </div>
   );
 }

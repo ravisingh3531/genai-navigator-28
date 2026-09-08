@@ -1133,7 +1133,7 @@ function Article() {
         <p className="mt-8">
           <a
             href="https://logicmojo.com"
-            className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary-glow px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform duration-200 hover:-translate-y-0.5"
           >
             Explore the LogicMojo Generative AI Course — curriculum, batch schedule and project list →
           </a>

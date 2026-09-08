@@ -205,7 +205,11 @@ function Article() {
           stack — LLMs, prompt engineering, RAG, LangChain/LangGraph, fine-tuning and AI agents —
           with live mentorship, interview preparation and career support,{" "}
           <strong>LogicMojo’s Generative AI Course</strong> is the strongest fit for job-focused
-          learners, developers and career switchers. For a globally recognised vendor credential:{" "}
+          learners, developers and career switchers; if you are a{" "}
+          <strong>complete beginner</strong>, the{" "}
+          <strong>LogicMojo AI &amp; ML Course with its Generative AI modules</strong> is the better
+          entry point because it teaches the Python and ML foundations first. For a globally
+          recognised vendor credential:{" "}
           <strong>Microsoft AI-102</strong>, <strong>Google Cloud Generative AI Leader</strong>,{" "}
           <strong>AWS AI Practitioner</strong> or <strong>NVIDIA NCA-GENL</strong>, depending on your
           cloud. For deep LLM foundations at near-zero cost,{" "}

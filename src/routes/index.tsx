@@ -1720,6 +1720,220 @@ function Article() {
         </Callout>
       </Section>
 
+      {/* HOW TO CHOOSE */}
+      <Section id="how-to-choose">
+        <H2>How to Choose the Right GenAI Certification</H2>
+        <Lead>
+          Direct answer: choose in this order — the outcome you need, the level of proof that outcome
+          requires, your honest weekly hours, then the credential. Choosing brand first is what
+          produces most of the regret in this category.
+        </Lead>
+
+        <H3>Step 1 — Decide which of four outcomes you are buying</H3>
+        <DataTable
+          headers={["Your outcome", "What must be true", "Type of credential that serves it"]}
+          rows={[
+            [
+              "Get hired into a GenAI role",
+              "You can build, deploy and defend GenAI systems",
+              "A project-assessed program, plus one recognised badge for screening",
+            ],
+            [
+              "Apply GenAI inside your current job",
+              "You know your organisation's platform and services",
+              "The vendor exam for the cloud your team already runs",
+            ],
+            [
+              "Support a promotion or internal move",
+              "Your L&D team recognises the issuer",
+              "A vendor exam or an employer-recognised branded program",
+            ],
+            [
+              "Lead, scope or govern GenAI work",
+              "You can evaluate feasibility, cost and risk",
+              "A non-engineering leader/fundamentals certification",
+            ],
+          ]}
+        />
+
+        <H3>Step 2 — Match the proof level, not the price</H3>
+        <P>
+          Return to the credibility ladder. A Level 1 literacy certificate cannot produce a Level 4
+          hiring outcome regardless of what it costs, and a Level 4 engineering program is wasted money
+          if all you needed was Level 1 vocabulary for stakeholder conversations. Most bad purchases in
+          this category are a level mismatch, not a quality problem.
+        </P>
+
+        <H3>Step 3 — Test the curriculum against the 2026 stack</H3>
+        <Bullets
+          items={[
+            "LLMs and transformer fundamentals — named modules, not a single overview video.",
+            "Prompt engineering with structured outputs and function/tool calling.",
+            "Embeddings and at least one vector database, with chunking and retrieval strategy.",
+            "RAG end to end, including hybrid retrieval, re-ranking and retrieval evaluation.",
+            "LangChain and LangGraph, or an equivalent orchestration framework.",
+            "Fine-tuning: when it is the wrong answer, and LoRA/QLoRA when it is the right one.",
+            "AI agents, tool use, multi-agent patterns and the MCP-style integration layer.",
+            "Evaluation, guardrails, cost and latency control, deployment and observability.",
+          ]}
+        />
+        <Callout label="The four-module test">
+          Agents, evaluation, guardrails and deployment are the four areas most commonly missing. If a
+          2026 syllabus omits all four, it is a 2023 syllabus with new marketing.
+        </Callout>
+
+        <H3>Step 4 — Be honest about hours and format</H3>
+        <P>
+          Under five hours a week, buy a self-paced foundation and one exam. Five to ten hours, a
+          self-paced professional certificate is realistic. Ten hours or more and you want structure,
+          a live cohort with graded projects converts best. Format is not a preference question; it is
+          the main predictor of whether you finish.
+        </P>
+
+        <H3>Step 5 — Cost the credential over its whole life</H3>
+        <DataTable
+          headers={["Cost line", "Frequently forgotten", "Ask for"]}
+          rows={[
+            ["Enrolment or exam fee", "Currency and taxes", "The price on the official page [VERIFY]"],
+            ["Retake fee", "Assumed to be free", "The retake policy and cost [VERIFY]"],
+            ["Renewal / recertification", "Assumed to be lifetime", "The validity term and renewal cost [VERIFY]"],
+            ["Cloud and API spend for labs", "Rarely mentioned", "An estimated lab spend range"],
+            ["EMI or loan interest", "Continues if you stop attending", "The lender's written terms"],
+            ["Your time", "The largest cost of all", "Total hours, honestly stated"],
+          ]}
+        />
+      </Section>
+
+      {/* BEYOND MARKETING */}
+      <Section id="beyond-marketing">
+        <H2>What to Look For Beyond Certification Marketing</H2>
+        <Lead>
+          Every provider in this category uses the same six phrases. These are the checks that
+          separate the ones that mean something from the ones that do not.
+        </Lead>
+
+        <H3>Certification vs course-completion certificate</H3>
+        <DataTable
+          headers={["", "Certification", "Course-completion certificate"]}
+          rows={[
+            [
+              "What earns it",
+              "Passing an assessment set by an issuing body",
+              "Finishing the content, sometimes with quizzes",
+            ],
+            [
+              "Who issues it",
+              "A vendor or standards body independent of your learning",
+              "The platform that sold you the course",
+            ],
+            [
+              "Can it be failed?",
+              "Yes — that is the entire point",
+              "Usually not",
+            ],
+            [
+              "Verification",
+              "Public badge, credential ID or lookup",
+              "A PDF, sometimes with a link",
+            ],
+            [
+              "Expiry",
+              "Commonly time-limited with renewal",
+              "Usually permanent, because nothing is being attested",
+            ],
+            [
+              "How a recruiter reads it",
+              "A standardised signal at screening",
+              "Evidence of effort; the portfolio decides",
+            ],
+          ]}
+          caption="Neither is dishonest. Both are useful. Paying certification prices for a completion certificate is the mistake."
+        />
+
+        <H3>Exam rigour — five questions that reveal it</H3>
+        <Numbered
+          items={[
+            "Is the assessment proctored, and what is the passing standard?",
+            "Are there sample or practice questions published by the issuer?",
+            "Can the credential be earned without writing a single line of code?",
+            "Is any work reviewed by a human, and how many times?",
+            "Is there a real capstone that must be deployed and evaluated, or does it end in a notebook?",
+          ]}
+        />
+
+        <H3>Credential verification</H3>
+        <P>
+          Ask one question: <em>how would an employer confirm I hold this, without contacting me?</em>{" "}
+          A public badge page, a credential ID or an issuer lookup is a real answer. “We will email you
+          a certificate” is not — and it tells you how the credential will be read.
+        </P>
+
+        <H3>Renewal and expiry</H3>
+        <Bullets
+          items={[
+            "Does it expire, and after how long? [VERIFY per certification]",
+            "Is renewal a fresh paid exam, a free online assessment, or continuing-education credits?",
+            "What happens to the badge if you let it lapse — and does the lapse show publicly?",
+            "For a completion certificate: it will not expire, but its content will. Plan to refresh anyway.",
+          ]}
+        />
+
+        <H3>Outdated curricula — how to detect them in two minutes</H3>
+        <Bullets
+          items={[
+            "No last-updated date anywhere on the curriculum or exam guide.",
+            "Model names and tooling that are two generations behind current releases.",
+            "GenAI as the final two modules of an otherwise classical ML course.",
+            "No mention of agents, MCP-style integrations, evaluation or guardrails.",
+            "Screenshots in the brochure showing interfaces that no longer exist.",
+          ]}
+        />
+
+        <H3>Misleading recognition claims</H3>
+        <DataTable
+          headers={["The claim", "What to ask", "What a good answer looks like"]}
+          rows={[
+            [
+              "“Industry-recognised”",
+              "Recognised by whom, specifically?",
+              "A named issuer, a named standard, or a verifiable badge",
+            ],
+            [
+              "“In collaboration with <university>”",
+              "Who designs and who teaches each module?",
+              "Named faculty involvement, in writing",
+            ],
+            [
+              "“Globally valid certification”",
+              "Which body attests it, and where is it verifiable?",
+              "A public credential lookup",
+            ],
+            [
+              "“<N>% placement”",
+              "Percent of whom, over what period, by what definition of placed?",
+              "A stated denominator and time window",
+            ],
+            [
+              "“Hands-on labs”",
+              "Do I write the code, or click through a guided demo?",
+              "A sample lab you can inspect before paying",
+            ],
+            [
+              "“Job guarantee”",
+              "Nothing — treat it as disqualifying",
+              "No credible provider guarantees employment",
+            ],
+          ]}
+        />
+        <Callout>
+          The single most useful habit: ask every provider for its claims in writing, then compare the
+          written answer with the landing page. The gap between the two is the most honest data you
+          will get.
+        </Callout>
+      </Section>
+
+
+
       {/* SECTION 14 — Free vs paid */}
       <Section id="free-vs-paid">
         <H2>Free vs Paid GenAI Certifications — When Free Is Genuinely Enough</H2>

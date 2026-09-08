@@ -315,14 +315,16 @@ function Article() {
       <Section id="toc">
         <H2>Table of contents</H2>
         <nav aria-label="Table of contents">
-          <ol className="mt-6 grid gap-x-8 gap-y-2 sm:grid-cols-2">
+          <ol className="mt-7 grid gap-3 sm:grid-cols-2">
             {toc.map(([id, label], i) => (
-              <li key={id} className="text-base">
+              <li key={id}>
                 <a
                   href={`#${id}`}
-                  className="text-muted-foreground underline decoration-accent/40 underline-offset-4 transition-colors hover:text-accent"
+                  className="surface-card surface-card-hover flex items-center gap-3 px-4 py-3 text-sm font-medium text-foreground"
                 >
-                  <span className="mr-2 font-semibold text-accent">{i + 1}.</span>
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-md bg-primary-soft text-xs font-bold text-primary">
+                    {i + 1}
+                  </span>
                   {label}
                 </a>
               </li>

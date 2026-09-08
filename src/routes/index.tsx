@@ -130,12 +130,13 @@ function Article() {
           <strong>upGrad/IIIT-Bangalore</strong>. Full comparison, fees, eligibility and honest
           limitations below.
         </p>
-      </div>
+        </div>
 
-      <p className="mt-4 text-sm italic text-muted-foreground">
-        Disclosure: this article is published by LogicMojo; LogicMojo’s course is reviewed on the
-        same six criteria as every other program on this list, and its limitations are stated openly.
-      </p>
+        <p className="mt-4 rounded-lg border border-border bg-muted/60 px-4 py-3 text-sm italic text-muted-foreground">
+          Disclosure: this article is published by LogicMojo; LogicMojo’s course is reviewed on the
+          same six criteria as every other program on this list, and its limitations are stated
+          openly.
+        </p>
 
       {/* INTRODUCTION */}
       <Section id="intro">

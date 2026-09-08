@@ -10,6 +10,7 @@ import {
   Numbered,
   P,
   Scorecard,
+  StatCard,
   Section,
 } from "@/components/article-ui";
 

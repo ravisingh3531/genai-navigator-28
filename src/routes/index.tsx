@@ -149,22 +149,26 @@ function Article() {
             Value and Career Scope Compared
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I assessed 80+ credentials against one question: will this make you capable, will an
-            employer respect it, and will it help you convert both into a role?
+            Every credential here is judged against one question, on eight published criteria: will
+            this make you capable, will an employer respect it, and will it help you convert both into
+            a role?
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-            <span className="rounded-md bg-muted px-2.5 py-1">Last updated: [INSERT DATE]</span>
+            <span className="rounded-md bg-muted px-2.5 py-1">
+              Last verified against official pages: [INSERT DATE]
+            </span>
             <span className="rounded-md bg-muted px-2.5 py-1">≈ 55 min read</span>
             <span className="rounded-md bg-primary-soft px-2.5 py-1 text-primary">
-              10 reviews · 36 FAQs · 6 comparison tables
+              10 reviews · 36 FAQs · interactive quiz
             </span>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-4">
-            <StatCard value="80+" label="Credentials assessed" />
-            <StatCard value="10" label="Deep-dive reviews" />
-            <StatCard value="6" label="Scoring pillars" />
-            <StatCard value="37" label="FAQs answered" />
+            <StatCard value="10" label="Certifications reviewed" />
+            <StatCard value="8" label="Ranking criteria" />
+            <StatCard value="10" label="Honorable mentions" />
+            <StatCard value="36" label="FAQs answered" />
           </div>
+
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#at-a-glance"

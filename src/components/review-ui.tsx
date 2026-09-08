@@ -362,7 +362,13 @@ function recommend(a: Record<string, string>): { pick: string; reason: string } 
   const required = [...quizQuestions, cloudQuestion].map((q) => q.id);
   if (required.some((id) => !a[id])) return null;
 
-  const { background, goal, budget, hours, priority, format, cloud } = a;
+  const background = a["background"] ?? "";
+  const goal = a["goal"] ?? "";
+  const budget = a["budget"] ?? "";
+  const hours = a["hours"] ?? "";
+  const priority = a["priority"] ?? "";
+  const format = a["format"] ?? "";
+  const cloud = a["cloud"] ?? "";
   const canPay = ["15to60", "60to150", "150plus"].includes(budget);
   const enoughHours = ["10to15", "15plus"].includes(hours);
 

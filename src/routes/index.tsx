@@ -99,17 +99,22 @@ export const Route = createFileRoute("/")({
 });
 
 const toc = [
+  ["the-problem", "The Problem — Why Choosing Is Harder Than Passing"],
+  ["cost-of-wrong", "The Cost of Getting It Wrong"],
+  ["methodology", "How I Researched & Ranked These 10 Certifications"],
   ["what-it-means", "What “GenAI Certification” Actually Means in 2026"],
   ["skill-stack", "The 2026 GenAI Skill Stack"],
   ["at-a-glance", "Top 10 GenAI Certifications At a Glance"],
   ["logicmojo", "Why LogicMojo Stands Out"],
   ["reviews", "In-Depth Reviews of All 10 Certifications"],
   ["honorable", "Also Considered — 10 That Missed the Top 10"],
-  ["learner-types", "Which Certification Should You Choose?"],
+  ["learner-types", "Which Certification Should You Choose? (+ Quiz)"],
   ["career-scope", "GenAI Career Scope, Roles and Salary Bands"],
   ["roadmap", "Your Certification + Portfolio Roadmap"],
   ["employer-value", "Do Employers Actually Value GenAI Certifications?"],
   ["red-flags", "Red Flags — Spotting a Bad Certification"],
+  ["how-to-choose", "How to Choose the Right GenAI Certification"],
+  ["beyond-marketing", "What to Look For Beyond Certification Marketing"],
   ["decision-tree", "Decision Tree — Pick Yours in 60 Seconds"],
   ["free-vs-paid", "Free vs Paid — When Free Is Enough"],
   ["roi", "ROI Reality — Is It Worth It?"],
@@ -118,6 +123,7 @@ const toc = [
   ["faqs", "36 GenAI Certification FAQs"],
   ["verdict", "Final Verdict"],
 ];
+
 
 function Article() {
   return (

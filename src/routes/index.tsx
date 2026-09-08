@@ -401,6 +401,12 @@ function Article() {
       {/* COST OF GETTING IT WRONG */}
       <Section id="cost-of-wrong">
         <H2>The Cost of Getting It Wrong</H2>
+        <Callout label="What I have seen happen">
+          The costliest case I keep meeting is not the person who bought a bad course — it is the
+          person who bought a good one for the wrong outcome: a proctored platform exam when what the
+          role needed was a deployed project, or a project program when the employer simply wanted a
+          verifiable badge on the internal transfer form. Same money, same effort, wrong instrument.
+        </Callout>
         <P>
           Direct answer: the money is recoverable and the months are not. A wrong GenAI certification
           costs a fee plus a study cycle in a field where the syllabus moves every two quarters — and

@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 
 /* ------------------------------------------------------------------ */
 /* Full 12-part certification review                                   */

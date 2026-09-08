@@ -1665,15 +1665,23 @@ function Article() {
           can defend. That is the entire strategy. Everything else in this article is just detail on how
           to execute it.
         </Callout>
-        <p className="mt-8">
-          <a
-            href="https://logicmojo.com"
-            className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
-          >
-            Explore the LogicMojo Generative AI Course →
-          </a>
-        </p>
-      </Section>
-    </main>
+          <div className="reveal mt-10 overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-glow p-8 text-center shadow-[var(--shadow-glow)]">
+            <h3 className="text-2xl text-primary-foreground">
+              Ready to build a GenAI portfolio you can defend?
+            </h3>
+            <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-primary-foreground/85">
+              Live cohorts, 10–15 graded projects, agents, RAG, fine-tuning, LLMOps and GenAI
+              interview preparation.
+            </p>
+            <a
+              href="https://logicmojo.com"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-card px-6 py-3 text-sm font-semibold text-primary transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              Explore the LogicMojo Generative AI Course →
+            </a>
+          </div>
+        </Section>
+      </main>
+    </div>
   );
 }

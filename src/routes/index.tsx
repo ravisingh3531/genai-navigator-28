@@ -477,6 +477,12 @@ function Article() {
       {/* METHODOLOGY */}
       <Section id="methodology">
         <H2>How I Researched &amp; Ranked These 10 GenAI Certifications</H2>
+        <Callout label="My method, stated plainly">
+          I weight what I can inspect myself — published exam guides, module lists, sample assessments,
+          the projects a program asks you to build — because those are the parts you can also verify
+          before paying. Where a judgement rests on my experience rather than a document (employer
+          recognition, interview relevance), I label it as judgement in the review itself.
+        </Callout>
         <Lead>
           Transparency first, because a ranking you cannot audit is just an opinion with a table. Here
           is exactly what I read, what I scored, what I refused to score, and where this method is

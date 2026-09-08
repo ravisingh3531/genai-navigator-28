@@ -364,12 +364,12 @@ function Article() {
           headers={["Criterion", "Weight", "What I checked, concretely"]}
           rows={[
             [
-              "GenAI curriculum depth &amp; 2026 relevance",
+              "GenAI curriculum depth & 2026 relevance",
               "20%",
               "LLMs and transformers → prompt engineering → embeddings and vector databases → RAG → LangChain/LangGraph → fine-tuning → AI agents → evaluation, guardrails and GenAI deployment. Named modules, not adjectives.",
             ],
             [
-              "Certification credibility &amp; issuer",
+              "Certification credibility & issuer",
               "15%",
               "Who issues it, whether it is a certification or a course-completion certificate, and whether an employer can verify it independently.",
             ],
@@ -384,12 +384,12 @@ function Article() {
               "Do you build or follow? Is anything deployed, evaluated or benchmarked? Are the projects described specifically enough to be real?",
             ],
             [
-              "Industry &amp; employer recognition",
+              "Industry & employer recognition",
               "12%",
               "Brand strength of the issuer, how the credential is likely read at screening stage, and whether recognition claims are specific or vague.",
             ],
             [
-              "Prerequisites &amp; accessibility",
+              "Prerequisites & accessibility",
               "8%",
               "Stated eligibility, bridge or onboarding modules, live-vs-self-paced, IST timings, language, deferral and refund policy.",
             ],

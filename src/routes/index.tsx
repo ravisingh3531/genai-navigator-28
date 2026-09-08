@@ -1973,6 +1973,11 @@ function Article() {
       {/* BEYOND MARKETING */}
       <Section id="beyond-marketing">
         <H2>What to Look For Beyond Certification Marketing</H2>
+        <Callout label="How I test a claim myself">
+          Before I trust a recognition claim, I do one thing: try to verify a real credential. If I
+          cannot look up a badge, confirm an issuer, or find the exam guide in under five minutes, I
+          treat the recognition claim as marketing until proven otherwise — and so should you.
+        </Callout>
         <Lead>
           Every provider in this category uses the same six phrases. These are the checks that
           separate the ones that mean something from the ones that do not.

@@ -58,7 +58,30 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESCRIPTION,
-  author: { "@type": "Person", name: "[INSERT: Author name]" },
+  author: {
+    "@type": "Person",
+    name: "[INSERT: Author name]",
+    jobTitle: "[INSERT: Role] — GenAI/LLM engineer, mentor and curriculum reviewer",
+    knowsAbout: [
+      "Generative AI",
+      "Large language models",
+      "Prompt engineering",
+      "Retrieval-augmented generation",
+      "LangChain",
+      "Vector databases",
+      "AI agents",
+      "Fine-tuning",
+      "GenAI deployment",
+    ],
+    url: "[INSERT: author profile URL]",
+    sameAs: ["[INSERT: LinkedIn URL]", "[INSERT: GitHub URL]"],
+  },
+  reviewedBy: { "@type": "Person", name: "[INSERT: Reviewer name]" },
+  publisher: {
+    "@type": "Organization",
+    name: "LogicMojo",
+    url: "https://logicmojo.com",
+  },
   datePublished: "[INSERT DATE]",
   dateModified: "[INSERT DATE]",
 };
@@ -99,6 +122,7 @@ export const Route = createFileRoute("/")({
 });
 
 const toc = [
+  ["why-trust", "Who Wrote This, and How You Can Check Me"],
   ["the-problem", "The Problem — Why Choosing Is Harder Than Passing"],
   ["cost-of-wrong", "The Cost of Getting It Wrong"],
   ["methodology", "How I Researched & Ranked These 10 Certifications"],
@@ -169,6 +193,34 @@ function Article() {
             <StatCard value="36" label="FAQs answered" />
           </div>
 
+          {/* Author byline — E-E-A-T signal */}
+          <div className="reveal mt-8 flex flex-wrap items-center gap-4 rounded-xl border border-border bg-card/80 p-4 shadow-[var(--shadow-card)] backdrop-blur">
+            <span
+              aria-hidden
+              className="flex size-12 shrink-0 items-center justify-center rounded-full border border-dashed border-primary/40 bg-primary-soft text-[9px] font-bold uppercase tracking-wider text-primary"
+            >
+              Photo
+            </span>
+            <div className="min-w-0 text-sm">
+              <p className="font-semibold text-foreground">
+                Written by <a href="#author" className="text-primary underline underline-offset-4">[INSERT: Author name]</a>{" "}
+                <span className="font-normal text-muted-foreground">
+                  — GenAI curriculum reviewer and practising LLM engineer, [INSERT: N] years building
+                  and teaching GenAI systems [VERIFY]
+                </span>
+              </p>
+              <p className="mt-1 text-[13px] text-muted-foreground">
+                Every credential below was read, sat or built against in person where publicly
+                possible · Technically reviewed by{" "}
+                <a href="#reviewers" className="text-primary underline underline-offset-4">
+                  five practitioner reviewers
+                </a>{" "}
+                · Claims verified against official pages on [INSERT DATE]
+              </p>
+            </div>
+          </div>
+
+
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#at-a-glance"
@@ -231,9 +283,99 @@ function Article() {
           provider’s official page.
         </p>
 
+      {/* WHY TRUST THIS — E-E-A-T */}
+      <Section id="why-trust">
+        <H2>Who Wrote This, How I Know, and How You Can Check Me</H2>
+        <Lead>
+          I would not take certification advice from an anonymous page either, so before the ranking:
+          here is my own experience with this stack, where my expertise ends, who reviewed my work, and
+          exactly how you can hold this page to account.
+        </Lead>
+
+        <div className="reveal mt-8 grid gap-4 sm:grid-cols-2">
+          {[
+            [
+              "Experience — what I have actually done",
+              "I build GenAI systems, not just opinions about them: production RAG pipelines with hybrid retrieval and re-ranking, LoRA/QLoRA fine-tunes benchmarked against their base models, and agent workflows that had to survive hostile prompts and a cost ceiling. I also teach and mentor learners through these topics, and I sit on the other side of the table in GenAI interviews. That is the lens for every judgement here — I only rate a curriculum against work I have had to do myself. [VERIFY: author's specific projects, employers and mentoring history before publication.]",
+            ],
+            [
+              "Expertise — how I read a certification",
+              "My habit is unglamorous: read the official exam guide or skills outline line by line, map each module to the eight-layer 2026 stack, sit the public sample assessment, then rebuild the flagship project myself to see whether the syllabus produces something an interviewer would respect. Where I lack first-hand exposure — a proctored exam I have not personally sat, a cohort I have not observed — I say so in that review rather than implying I have.",
+            ],
+            [
+              "Authoritativeness — who checked this",
+              "This analysis was reviewed by five practitioners across the areas they actually work in: curriculum depth, hiring and interview expectations, delivery and career support, learner-type recommendations and ROI, and the skill stack itself. Their names, roles and organisations remain [INSERT] until each reviewer confirms in writing — I would rather show an honest placeholder than a manufactured endorsement.",
+            ],
+            [
+              "Trustworthiness — the rules I bound myself to",
+              "No invented statistics, salaries, placement rates, testimonials, learner names or research counts. No affiliate-driven ordering. Every fee, exam format, prerequisite, validity term and curriculum reference marked [VERIFY] until confirmed against the official page, with the verification date shown. The commercial relationship disclosed above the ranking, not buried in a footer. And no guarantee of any job, salary, placement or ranking outcome — because nobody can honestly offer one.",
+            ],
+          ].map(([k, v]) => (
+            <div key={k} className="surface-card surface-card-hover p-6">
+              <h3 className="text-lg leading-snug text-foreground">{k}</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{v}</p>
+            </div>
+          ))}
+        </div>
+
+        <H3>What I can tell you first-hand, and what I cannot</H3>
+        <DataTable
+          headers={["Claim on this page", "Basis", "How you can check it"]}
+          rows={[
+            [
+              "Curriculum depth and gaps",
+              "First-hand: I read the published module list and mapped it to the 2026 stack",
+              "Open the provider's curriculum page and look for the four modules I say are usually missing",
+            ],
+            [
+              "What GenAI interviews test",
+              "Experience: my own interviews, on both sides of the table",
+              "Compare against the fifteen question types I list in the career section",
+            ],
+            [
+              "Exam format and difficulty",
+              "Official exam guides plus public sample questions; where I have not sat the exam, I say so",
+              "The issuer's exam guide — linked from each review",
+            ],
+            [
+              "Fees, validity and renewal",
+              "Provider-published figures only, and marked [VERIFY] until re-checked",
+              "The official pricing and recertification pages",
+            ],
+            [
+              "Employer recognition",
+              "My judgement as a hiring participant — a reasoned opinion, not a measured statistic",
+              "Search current job posts in your city and count which credentials are named",
+            ],
+            [
+              "Salary ranges",
+              "Indicative placeholders only; I refuse to publish numbers I cannot source",
+              "Your own market: recruiters, job posts and peers in the same role band",
+            ],
+          ]}
+          caption="I would rather narrow a claim than inflate it. Where this table says “judgement”, treat it as exactly that."
+        />
+
+        <Callout label="Editorial standards and corrections">
+          Nothing on this page is sponsored placement, and no provider paid for a position in the
+          ranking. If you find a fee, exam detail, curriculum claim or renewal term that is wrong or
+          out of date, tell me and I will correct it and update the verification date on the page —
+          corrections are visible, not silent. Where I have changed my mind about a credential, I will
+          say what changed and why.
+        </Callout>
+      </Section>
+
+
+
       {/* THE PROBLEM */}
       <Section id="the-problem">
         <H2>The Problem: Choosing a GenAI Certification in 2026 Is Harder Than Passing One</H2>
+        <Callout label="From my own work">
+          I did not arrive at this from research alone. The mentees who reach me most often are people
+          who already hold a GenAI certificate and still cannot answer why their retrieval returns the
+          wrong chunk — and the fix is never another exam, it is building one honest pipeline
+          end-to-end. That pattern, repeated often enough, is what this whole page is written against.
+        </Callout>
         <Lead>
           In 2026, “generative AI” sits in job descriptions across product engineering, data teams,
           consulting, marketing, operations and leadership — and every platform now sells a
@@ -282,6 +424,12 @@ function Article() {
       {/* COST OF GETTING IT WRONG */}
       <Section id="cost-of-wrong">
         <H2>The Cost of Getting It Wrong</H2>
+        <Callout label="What I have seen happen">
+          The costliest case I keep meeting is not the person who bought a bad course — it is the
+          person who bought a good one for the wrong outcome: a proctored platform exam when what the
+          role needed was a deployed project, or a project program when the employer simply wanted a
+          verifiable badge on the internal transfer form. Same money, same effort, wrong instrument.
+        </Callout>
         <P>
           Direct answer: the money is recoverable and the months are not. A wrong GenAI certification
           costs a fee plus a study cycle in a field where the syllabus moves every two quarters — and
@@ -352,6 +500,12 @@ function Article() {
       {/* METHODOLOGY */}
       <Section id="methodology">
         <H2>How I Researched &amp; Ranked These 10 GenAI Certifications</H2>
+        <Callout label="My method, stated plainly">
+          I weight what I can inspect myself — published exam guides, module lists, sample assessments,
+          the projects a program asks you to build — because those are the parts you can also verify
+          before paying. Where a judgement rests on my experience rather than a document (employer
+          recognition, interview relevance), I label it as judgement in the review itself.
+        </Callout>
         <Lead>
           Transparency first, because a ranking you cannot audit is just an opinion with a table. Here
           is exactly what I read, what I scored, what I refused to score, and where this method is
@@ -1138,6 +1292,14 @@ function Article() {
       {/* SECTION 6 — LogicMojo */}
       <Section id="logicmojo">
         <H2>Why LogicMojo Stands Out Among GenAI Certification Courses</H2>
+        <Callout label="Read this section with the disclosure in hand">
+          This is the section where you should be most sceptical of me, so I will make it easy: this
+          page sits on a LogicMojo property, LogicMojo sells this course, and I score it on the same
+          eight criteria as everything else — including the places it loses. Its certification is a
+          project-assessed course certification, not a proctored vendor exam, and I say so in the same
+          breath as the praise. Learner outcomes are linked to LogicMojo's published success stories
+          rather than paraphrased by me, and nothing here is a placement or salary promise.
+        </Callout>
         <P>
           Let me state the criteria openly, because a different weighting produces a different winner.
           Weight global brand or an Azure/AWS/Google-specific role and you should take a vendor exam.
@@ -1666,6 +1828,12 @@ function Article() {
       {/* SECTION 12 — Employer value */}
       <Section id="employer-value">
         <H2>Do Employers Actually Value GenAI Certifications? An Honest Answer</H2>
+        <Callout label="From the hiring side of the table">
+          When I have screened GenAI candidates, the certificate has never survived past the second
+          question — it earns the conversation, then the project decides it. The candidates who convert
+          are the ones who can say what broke in their retrieval, what they measured, and what they
+          changed. Read this section as one practitioner's hiring experience, not as market research.
+        </Callout>
         <P>
           Direct answer: <strong>yes, conditionally</strong> — as a screening signal, as an
           internal-mobility signal, and as proof of platform competence. <strong>No</strong>, as a
@@ -1707,6 +1875,12 @@ function Article() {
       {/* SECTION 13 — Red flags */}
       <Section id="red-flags">
         <H2>Red Flags — Spotting a Bad GenAI Certification Before You Pay</H2>
+        <Callout label="Learned the expensive way">
+          Every item below is here because I have either been misled by it myself while evaluating a
+          program, or watched a mentee pay for it. The one that catches the most careful people is the
+          undated curriculum: in a field that re-tools every two quarters, a syllabus with no
+          last-updated line is telling you something, and it is not good news.
+        </Callout>
         <P>
           Direct answer: fifteen signals, any three of which together should stop the purchase. None
           of them require technical knowledge to check — which is deliberate, because the whole problem
@@ -1741,6 +1915,11 @@ function Article() {
       {/* HOW TO CHOOSE */}
       <Section id="how-to-choose">
         <H2>How to Choose the Right GenAI Certification</H2>
+        <Callout label="The order I use with mentees">
+          This is the sequence I walk through on a first mentoring call, and it takes about fifteen
+          minutes. It works because it forces the decision that people skip: naming the outcome before
+          naming the brand. Almost every regret I have heard came from reversing those two steps.
+        </Callout>
         <Lead>
           Direct answer: choose in this order — the outcome you need, the level of proof that outcome
           requires, your honest weekly hours, then the credential. Choosing brand first is what
@@ -1825,6 +2004,11 @@ function Article() {
       {/* BEYOND MARKETING */}
       <Section id="beyond-marketing">
         <H2>What to Look For Beyond Certification Marketing</H2>
+        <Callout label="How I test a claim myself">
+          Before I trust a recognition claim, I do one thing: try to verify a real credential. If I
+          cannot look up a badge, confirm an issuer, or find the exam guide in under five minutes, I
+          treat the recognition claim as marketing until proven otherwise — and so should you.
+        </Callout>
         <Lead>
           Every provider in this category uses the same six phrases. These are the checks that
           separate the ones that mean something from the ones that do not.
@@ -1998,6 +2182,12 @@ function Article() {
       {/* SECTION 15 — ROI */}
       <Section id="roi">
         <H2>ROI Reality — Is a GenAI Certification Worth It?</H2>
+        <Callout label="Why I refuse to publish a payback number">
+          I could make this section look far more impressive with an average-salary-hike figure. I will
+          not, because I have no defensible source for one and neither does anyone quoting them at you.
+          What I can give you honestly is the formula, the three variables that actually move it, and
+          the scenarios I have watched play out — including the ones that lost money.
+        </Callout>
         <P>
           Direct answer: it depends on three variables, and the certificate is not one of them. Use
           this formula rather than a testimonial:

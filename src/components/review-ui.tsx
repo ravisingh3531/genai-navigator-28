@@ -932,17 +932,37 @@ export function AuthorBio() {
       <div>
         <p className="text-xl text-foreground">[INSERT: Author name]</p>
         <p className="mt-1 text-sm font-semibold text-primary">
-          [INSERT: Role] — GenAI education analyst and curriculum reviewer
+          [INSERT: Role] — practising GenAI/LLM engineer, mentor and curriculum reviewer ·
+          [INSERT: N] years in AI/ML, [INSERT: N] of them on generative systems [VERIFY]
         </p>
         <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-          I review GenAI and EdTech curricula for a living: I read syllabi and exam guides line by
-          line, sit sample assessments where they are public, build the reference projects myself,
-          and compare what a program teaches against what GenAI interviews actually test. This
-          analysis exists because the category has become impossible to judge from landing pages —
-          five different instruments are all sold under the word “certification”. Every fee,
-          curriculum and renewal claim here is marked [VERIFY] until confirmed against the
-          provider’s official page.
+          I write this as someone who builds the thing I am assessing. My working weeks are spent on
+          retrieval pipelines that have to return the right chunk, fine-tunes that have to beat their
+          base model on a real evaluation set, and agents that have to stay inside a cost budget — and
+          the rest of my time goes to mentoring learners through exactly those problems and
+          interviewing candidates who claim them on a résumé. So when I judge a syllabus, I am asking
+          one question: would this have prepared me for the work I actually had to do?
         </p>
+        <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
+          My method is deliberately checkable: read the official exam guide or skills outline line by
+          line, map every module to the eight-layer 2026 stack, sit the public sample assessment, build
+          the flagship project myself, then compare it against what GenAI interviews test. Where I have
+          not sat an exam or observed a cohort first-hand, I say so inside that review rather than
+          implying experience I do not have.
+        </p>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {[
+            ["Hands-on", "Production RAG, fine-tuning and agent work [VERIFY: specific projects]"],
+            ["Teaching", "Mentoring learners through the same stack [VERIFY: programs, cohorts]"],
+            ["Hiring", "Interviewing GenAI candidates [VERIFY: role and organisation]"],
+            ["Credentials", "[INSERT: degrees, certifications, publications, talks] [VERIFY]"],
+          ].map(([k, v]) => (
+            <div key={k} className="rounded-xl border border-border bg-muted/50 px-4 py-3">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-primary">{k}</p>
+              <p className="mt-1 text-[14px] leading-snug text-muted-foreground">{v}</p>
+            </div>
+          ))}
+        </div>
         <div className="mt-5 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-wider">
           <a
             href="#"
@@ -950,13 +970,22 @@ export function AuthorBio() {
           >
             LinkedIn [INSERT URL]
           </a>
+          <a
+            href="#"
+            className="rounded-lg border border-primary/30 bg-card px-3.5 py-2 text-primary hover:bg-primary-soft"
+          >
+            GitHub / portfolio [INSERT URL]
+          </a>
           <span className="rounded-lg bg-muted px-3.5 py-2 text-muted-foreground">
             Last reviewed: [INSERT DATE]
           </span>
         </div>
         <p className="mt-4 text-sm italic leading-relaxed text-muted-foreground">
-          This page is updated as exam guides, curricula, fees and renewal policies change; fee and
-          exam-price checks are scheduled quarterly.
+          Independence and corrections: no provider paid for a place in this ranking, LogicMojo’s
+          commercial interest is disclosed above the comparison, and every fee, exam and renewal claim
+          carries a [VERIFY] marker until re-checked against the official page. This page is updated as
+          exam guides, curricula, fees and renewal policies change, with fee checks scheduled
+          quarterly; if you find an error, write in and I will correct it and update the date.
         </p>
       </div>
     </div>

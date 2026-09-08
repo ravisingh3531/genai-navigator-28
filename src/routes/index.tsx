@@ -99,6 +99,7 @@ export const Route = createFileRoute("/")({
 });
 
 const toc = [
+  ["why-trust", "Who Wrote This, and How You Can Check Me"],
   ["the-problem", "The Problem — Why Choosing Is Harder Than Passing"],
   ["cost-of-wrong", "The Cost of Getting It Wrong"],
   ["methodology", "How I Researched & Ranked These 10 Certifications"],
